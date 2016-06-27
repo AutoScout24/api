@@ -15,12 +15,6 @@
         $(function() {
           setupLanguages(["shell"]);
         });
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-        ga('create', 'UA-73554325-1', 'auto');
-        ga('send', 'pageview');
       </script>
   </head>
 
@@ -83,9 +77,9 @@ The API offers a RESTful interface to interact with the resources. The format to
 /vehicles/<span class="o">{</span>vehicledId<span class="o">}</span>/products
 /vehicles/<span class="o">{</span>vehicledId<span class="o">}</span>/products/<span class="o">{</span>poroductId<span class="o">}</span>
 /vehicles/<span class="o">{</span>vehicledId<span class="o">}</span>/financingoffers
-/vehicles/<span class="o">{</span>vehicledId<span class="o">}</span>/financingoffers/<span class="o">{</span>financingoffer<span class="o">}</span>
+/vehicles/<span class="o">{</span>vehicledId<span class="o">}</span>/financingoffers/<span class="o">{</span>financingofferId<span class="o">}</span>
 /statistics
-/statistics/<span class="o">{</span>vehicleId<span class="o">}</span>
+/statistics/<span class="o">{</span>statisticId<span class="o">}</span>
 /makes
 /makes/<span class="o">{</span>makeId<span class="o">}</span>
 /makes/<span class="o">{</span>makeId<span class="o">}</span>/models
@@ -835,7 +829,7 @@ following information:</p>
 <li>The <em>firstRegistration</em> date must not be more than 12 months in the past for pre-registered vehicles (<em>vehicleOfferType</em> = S).</li>
 <li>The <em>firstRegistration</em> date must be more than 360 months (30 years) in the past for classic vehicles/oldtimers (<em>vehicleOfferType</em> = O).</li>
 <li>The <em>mileage</em> must be set and greater than 0 for employee’s vehicles, pre-registered vehicles, classic vehicles/oldtimers and used vehicles (<em>vehicleOfferType</em> = J, S, O or U).</li>
-<li>The <em>mileage</em> must be smaller than 1000 for new and demonstration vehicles (<em>vehicleOfferType</em> = N or D).</li>
+<li>The <em>mileage</em> must be smaller than 1000 for new vehicles (<em>vehicleOfferType</em> = N).</li>
 <li>No <em>previousOwners</em> are allowed for new vehicles (<em>vehicleOfferType</em> = N). Pre-registered vehicles (<em>vehicleOfferType</em> = S) must not have more than one <em>previousOwner</em>. A demonstration vehicle (<em>vehicleOfferType</em> = D) must have at least one <em>previousOwner</em>.</li>
 <li>EnVKV rules (Energieverbrauchskennzeichnungsverordnung): Vehicles with <em>vehicleType = C (Car)</em> of German dealers with <em>vehicleOfferType</em> = N (New), D (Demonstration) or S (Pre-registered) can only be processed if they carry the following field information: <em>co2</em> (unless <em>primaryFuelType</em> = 12/Electric), <em>efficiencyClass</em>, <em>electricConsumptionCombined</em> (only if <em>primaryFuelType</em> = 12/Electric), <em>fuelConsumptionCombined</em> (unless <em>primaryFuelType</em> = 12/Electric), <em>primaryFuelType</em>.</li>
 </ul>
@@ -9093,7 +9087,7 @@ curl https://api.autoscout24.com/references <span class="se">\</span>
 </tr>
 <tr>
 <td>50029</td>
-<td>Field vehicleType has an invalid value. Please use C.</td>
+<td>Field vehicleType has an invalid value. Please use C or B.</td>
 </tr>
 <tr>
 <td>50030</td>
@@ -9249,7 +9243,7 @@ curl https://api.autoscout24.com/references <span class="se">\</span>
 </tr>
 <tr>
 <td>50074</td>
-<td>You have no permission to change publications for the vehicle {vehicleId}.</td>
+<td>The vehicle is not published on this channel and cannot be deleted.</td>
 </tr>
 <tr>
 <td>50075</td>
@@ -9257,7 +9251,7 @@ curl https://api.autoscout24.com/references <span class="se">\</span>
 </tr>
 <tr>
 <td>50076</td>
-<td>ChannelDispatcher: List of publication channels is empty for the vehicle {vehicleId}. There is nothing to change.</td>
+<td>A channel for this vehicle already exists. Please remove existing channel first.</td>
 </tr>
 <tr>
 <td>50077</td>
@@ -9336,10 +9330,6 @@ curl https://api.autoscout24.com/references <span class="se">\</span>
 <td>Product booking has an unknown value. Please provide correct value from /references.</td>
 </tr>
 <tr>
-<td>50098</td>
-<td>Provided product booking does not match subscription type. Please provide correct value from /references.</td>
-</tr>
-<tr>
 <td>50099</td>
 <td>Provided product has an unknown value. Please provide correct value from /references.</td>
 </tr>
@@ -9357,15 +9347,15 @@ curl https://api.autoscout24.com/references <span class="se">\</span>
 </tr>
 <tr>
 <td>50103</td>
-<td>Invalid json. Please provide a valid json.</td>
+<td>Request body is empty. Please provide a valid json body object.</td>
 </tr>
 <tr>
 <td>50104</td>
-<td>A contact for this vehicle does not exist. This vehicle cannot be published without contact.</td>
+<td>A contact for this vehicle does not exist. This vehicle can not be published/unpublished without contact.</td>
 </tr>
 <tr>
 <td>50105</td>
-<td>You are not allowed to publish this vehicle on this channel.</td>
+<td>You are not allowed to publish/unpublish this vehicle on this channel.</td>
 </tr>
 <tr>
 <td>50106</td>
@@ -9453,7 +9443,7 @@ curl https://api.autoscout24.com/references <span class="se">\</span>
 
 <p>This section documents all the changes on the AutoScout24 RESTful API. This includes documentation for the new features, changes to old features, and deprecated features. </p>
 
-<aside> <b>Version 1.1 is the most recent version of the AutoScout24 RESTful API</b>. This version was introduced on December 14th, 2015. For more information about AutoScout24&rsquo;s API evolution strategy, please refer to the <a href="#api-evolution">API Evolution section</a>.</aside>
+<aside> <b>Version 1.1 is the most recent version of the AutoScout24 RESTful API</b>. This version was introduced on February 22nd, 2016. For more information about AutoScout24&rsquo;s API evolution strategy, please refer to the <a href="#api-evolution">API Evolution section</a>.</aside>
 
 <h2 id="versions">Versions</h2>
 
