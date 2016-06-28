@@ -1,5 +1,12 @@
-.gitallowed
-Gemfile.lock
-*.md
-*.html
-_lang.js
+Gemfile\.lock:3
+7bee64c16f2da1a326579e96977b9227bf6da9e6
+7e59590f-c5a3-974e-e053-2951040ae4cc
+935e590f-d525-a948-e053-2951040a6584
+6c48bb1f-d14b-4ed3-ae1d-508cb71e19ba
+7e59591f-c5a3-974e-e452-2951040ae4ee
+e7c00b24-9f5f-4909-88de-38f8d7ca08bf
+0ce4270c-1557-41cf-b857-ae1f5f4ac9f9
+1d405b9a-146c-4381-b982-9f7447c4748f
+73a06d83-6e13-4444-a288-6aa8c4098c2f
+source/includes/_vehicles\.md
+index\.html
