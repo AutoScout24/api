@@ -241,7 +241,7 @@ When there is a need to introduce changes to the AutoScout24 API, then these cha
 <p>If the user clicked <em>Grant</em> in the previous screen, AutoScout24 will redirect to the URI you specified earlier with a <em>code</em> parameter and will provide you an authorization code. For example, if your redirect URI was https://www.yourredirecturi.com, AutoScout24 would redirect to: 
 <code class="prettyprint">GET https://www.yourredirecturi.com?code=123456abcdef</code></p>
 
-<p>The authorization code is valid for 30 seconds only.</p>
+<p>The authorization code is valid for 30 seconds only and can be used only once.</p>
 
 <p>However, if the user clicked <em>Deny</em>, you will receive a request with an error and error_description parameter, such as: 
 <code class="prettyprint">GET https://www.yourredirecturi.com?error=access_denied</code></p>
