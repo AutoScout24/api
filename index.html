@@ -348,7 +348,7 @@ The access token is what’s needed to sign your API requests to AutoScout24. </
 </tr>
 </tbody></table>
 
-<p>The requests must be sent over HTTPS and the parameters need to be <a href="http://en.wikipedia.org/wiki/Percent-encoding">URL encoded</a> by using the <code class="prettyprint">application/x-www-form-urlencoded</code> content type header. e.g. Content-Type: application/x-www-form-urlencoded</p>
+<p>If you're using a http client library please make sure send the data as a submitted form and to set the content type header by using the application/x-www-form-urlencoded type. e.g. Content-Type: application/x-www-form-urlencoded</p>
 
 <h3 id="supported-error-codes">Supported Error Codes</h3>
 
