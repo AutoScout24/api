@@ -122,7 +122,10 @@ To get the access_token, you’ll need to make a POST request to ```https://api.
 |client_id|	yes|Client ID obtained from AutoScout24 during the initial setup|
 |client_secret|yes|	Client Secret obtained from AutoScout24 during the initial setup|
 |redirect_uri|	 yes| One of the redirect URI's registered at AutoScout24|
-The requests must be sent over HTTPS and the parameters need to be [URL encoded](http://en.wikipedia.org/wiki/Percent-encoding) by using the ```application/x-www-form-urlencoded``` type.
+If you're using a http client library please make sure send the data as a submitted form and to set the content type header by using the ```application/x-www-form-urlencoded``` type. e.g. Content-Type: application/x-www-form-urlencoded
+
+Please not when using curl:
+curl with the '-d' parameter sends the specified data in a POST request to the HTTP server, in the same way that a browser does when a user has filled in an HTML form and presses the submit button. This will cause curl to pass the data to the server using the content-type application/x-www-form-urlencoded.
 
 
 ### Supported Error Codes
