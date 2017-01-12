@@ -350,6 +350,10 @@ The access token is what’s needed to sign your API requests to AutoScout24. </
 
 <p>If you're using a http client library please make sure send the data as a submitted form and to set the content type header by using the application/x-www-form-urlencoded type. e.g. Content-Type: application/x-www-form-urlencoded</p>
 
+<p>Please note when using curl:
+
+curl with the '-d' parameter sends the specified data in a POST request to the HTTP server, in the same way that a browser does when a user has filled in an HTML form and presses the submit button. This will cause curl to pass the data to the server using the content-type application/x-www-form-urlencoded.<p/>
+        
 <h3 id="supported-error-codes">Supported Error Codes</h3>
 
 <p>AutoScout24 supports the full set of error codes as specified in the OAuth 2.0 spec:</p>
