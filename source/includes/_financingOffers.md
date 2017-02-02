@@ -16,7 +16,7 @@ curl https://api.autoscout24.com/vehicles/7e59591f-c5a3-974e-e452-2951040ae4ee/f
      -X POST \
      -H "X-AS24-Version: 1.1" \
      -H "Accept-Language: en-GB" \
-     -H "Content-Type: application/json" 
+     -H "Content-Type: application/json"
      -H "Authorization: Bearer e7c00b24-9f5f-4909-88de-38f8d7ca08bf" \
      -d '{ \
 	  "annualPercentageRate": 4.99, \
@@ -35,16 +35,16 @@ curl https://api.autoscout24.com/vehicles/7e59591f-c5a3-974e-e452-2951040ae4ee/f
 	}'
 ```
 
-Add a new financing offer to the vehicle. (*This is only avaialble to the dealers in Germany. *).
+Add a new financing offer to the vehicle. *(This is only available to the dealers in Germany.)*
 
-Please note that AutoScout24 can add at the moment only one financing offer per vehicle.
+Please note that AutoScout24 can only add one financing offer per vehicle at the moment.
 
 
 **Semantic Rules**
 
 - Financing offers are only accepted for vehicles inserted by German dealers. Financing offers added by non-German dealers are rejected.
 
-- Only one financing offer can be added for each vehicle. 
+- Only one financing offer can be added for each vehicle.
 
 - Fields with type = string must not contain URLs, E-Mail addresses or prohibited characters < or > unless it is the *email* field itself.
 
@@ -66,7 +66,7 @@ Please note that AutoScout24 can add at the moment only one financing offer per 
 
 ### Payload Parameters
 
-*Hint: string length is counted as total of UFT-8 characters.*
+*Note: string length is counted as total of UFT-8 characters.*
 
 |Field Name|Type|Mandatory|Format|Description|
 |----|----|----|----|----|
@@ -132,13 +132,13 @@ For the list of possible **error codes** in the `_response` object of the Respon
 
 ```shell
 curl https://api.autoscout24.com/vehicles/7e59591f-c5a3-974e-e452-2951040ae4ee/financingoffers \
-     -X GET 
+     -X GET
      -H "X-AS24-Version: 1.1" \
      -H "Accept-Language: en-GB" \
-     -H "Authorization: Bearer e7c00b24-9f5f-4909-88de-38f8d7ca08bf" 
+     -H "Authorization: Bearer e7c00b24-9f5f-4909-88de-38f8d7ca08bf"
 ```
 
-Retrieve a collection of all available financing offers for a specific vehicle. (*This is only avaialble to the dealers in Germany. *).
+Retrieve a collection of all available financing offers for a specific vehicle. *(This is only avaialble to the dealers in Germany.)*
 
 At the moment, only one offer can be added and retrieved for a specific vehicle.
 
@@ -147,7 +147,7 @@ At the moment, only one offer can be added and retrieved for a specific vehicle.
 
 - Financing offers can be added and retrieved by German dealers only.
 
-- Currently, only one financing offer can be added and retrieved for each vehicle. 
+- Currently, only one financing offer can be added and retrieved for each vehicle.
 
 ###Parameters
 
@@ -274,7 +274,7 @@ Currently, only one offer can be added and retrieved for a specific vehicle.
 
 - Financing offers can be added and retrieved by German dealers only.
 
-- Currently, only one financing offer can be added and retrieved for each vehicle. 
+- Currently, only one financing offer can be added and retrieved for each vehicle.
 
 ###Parameters
 
@@ -388,7 +388,7 @@ curl https://api.autoscout24.com/vehicles/7e59591f-c5a3-974e-e452-2951040ae4ee/f
      -X PUT \
      -H "X-AS24-Version: 1.1" \
      -H "Accept-Language: en-GB" \
-     -H "Content-Type: application/json" 
+     -H "Content-Type: application/json"
      -H "Authorization: Bearer e7c00b24-9f5f-4909-88de-38f8d7ca08bf" \
      -d '{ \
 	  "annualPercentageRate": 4.99, \
@@ -414,7 +414,7 @@ Update the information of the given financing offer. (*This is only avaialble to
 
 - Financing offers are only accepted for vehicles inserted by German dealers. Financing offers added by non-German dealers are rejected.
 
-- Only one financing offer can be added for each vehicle. 
+- Only one financing offer can be added for each vehicle.
 
 - Fields with type = string must not contain URLs, E-Mail addresses or prohibited characters < or > unless it is the *email* field itself.
 
@@ -437,7 +437,7 @@ Update the information of the given financing offer. (*This is only avaialble to
 
 ### Payload Parameters
 
-*Hint: string length is counted as total of UFT-8 characters.*
+*Note: string length is counted as total of UFT-8 characters.*
 
 |Field Name|Type|Mandatory|Format|Description|
 |----|----|----|----|----|
@@ -507,7 +507,7 @@ curl https://api.autoscout24.com/vehicles/7e59591f-c5a3-974e-e452-2951040ae4ee/f
      -X DELETE \
      -H "X-AS24-Version: 1.1" \
      -H "Accept-Language: en-GB" \
-     -H "Authorization: Bearer e7c00b24-9f5f-4909-88de-38f8d7ca08bf" 
+     -H "Authorization: Bearer e7c00b24-9f5f-4909-88de-38f8d7ca08bf"
 ```
 
 Delete an existing vehicle's financing offer.

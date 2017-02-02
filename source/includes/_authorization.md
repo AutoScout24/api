@@ -9,8 +9,7 @@ Before you can start using [OAuth 2](http://oauth.net/2/) with your application,
 1. Register your application by contacting AutoScout24 via E-Mail (<a href="mailto:daten@autoscout24.de">daten@autoscout24.de</a>).
 2. While registering your application you need to provide the following information
   1. Your redirect URL.
-  2. Select your scope.
-3. After successful registration AutoScout24 provides an unique Client ID and Client Secret to you. 
+3. After successful registration AutoScout24 provides an unique Client ID and Client Secret to you.
 4. Store this ID and Secret, as you will need it to authenticate your application against the API.
 
 |Value|Description|
@@ -28,7 +27,7 @@ Before you can start using [OAuth 2](http://oauth.net/2/) with your application,
 > ###Sample Get request to the Authorization Server
 
 ```shell
-GET https://api.autoscout24.com/auth/oauth/v2/authorize?response_type=code&client_id={your_client_id}&redirect_uri={your_redirect_uri} 
+GET https://api.autoscout24.com/auth/oauth/v2/authorize?response_type=code&client_id={your_client_id}&redirect_uri={your_redirect_uri}
 ```
 
 First, direct the user of your application to ```https://api.autoscout24.com/auth/oauth/v2/authorize``` through either a ```POST``` or a ```GET``` request with the following parameters:
@@ -37,7 +36,7 @@ First, direct the user of your application to ```https://api.autoscout24.com/aut
 |----|----|----|
 |response_type|yes|Specifies whether the endpoint returns an authorization code. For web applications the value "code" should be used.|
 |client_id|yes| The Client ID you obtained during the initial setup.|
-|redirect_uri|	 yes|An HTTP(S) URI where the response will be redirected. You can register more than one redirect URI at AutoScout24.|
+|redirect_uri|yes|An HTTP(S) URI where the response will be redirected. You can register more than one redirect URI at AutoScout24. <strong>Attention:</strong> Please note that dynamic URIs are not supported. You have to provide static URIs.|
 
 For POST, include the parameters in the POST body. For GET, include them as query parameters. In both cases, [URL encode](http://en.wikipedia.org/wiki/Percent-encoding) the parameters.
 
@@ -56,15 +55,15 @@ After they have clicked either **Grant** or **Deny**, you’ll be sent a respons
 
 
 ## Handling the Response from AutoScout24
-If the user clicked *Grant* in the previous screen, AutoScout24 will redirect to the URI you specified earlier with a *code* parameter and will provide you an authorization code. For example, if your redirect URI was https://www.yourredirecturi.com, AutoScout24 would redirect to: 
+If the user clicked *Grant* in the previous screen, AutoScout24 will redirect to the URI you specified earlier with a *code* parameter and will provide you an authorization code. For example, if your redirect URI was https://www.yourredirecturi.com, AutoScout24 would redirect to:
 ```GET https://www.yourredirecturi.com?code=123456abcdef```
 
-The authorization code is valid for 30 seconds only.
+<strong>The authorization code is valid for 10 minutes and can be used only once.</strong>
 
-However, if the user clicked *Deny*, you will receive a request with an error and error_description parameter, such as: 
+However, if the user clicked *Deny*, you will receive a request with an error and error_description parameter, such as:
 ```GET https://www.yourredirecturi.com?error=access_denied```
 
-The following errors may occur: 
+The following errors may occur:
 
 |Error| Description|
 |----|----|
@@ -82,7 +81,7 @@ The error parameter will always be present in case an error occurs.
 
 ```shell
 curl https://api.autoscout24.com/auth/oauth/v2/token
--d 'grant_type=authorization_code&code={your_code}&client_id={your_client_id}&client_secret={your_client_secret}&redirect_uri={your_redirect_uri}' 
+-d 'grant_type=authorization_code&code={your_code}&client_id={your_client_id}&client_secret={your_client_secret}&redirect_uri={your_redirect_uri}'
 -X POST
 ```
 
@@ -111,7 +110,7 @@ curl https://api.autoscout24.com/auth/oauth/v2/token
 
 You’re almost done!
 Once your application has completed the above section and gotten an authorization code, it will now need to exchange the authorization code for an access token from AutoScout24.
-The access token is what’s needed to sign your API requests to AutoScout24. 
+The access token is what’s needed to sign your API requests to AutoScout24.
 
 To get the access_token, you’ll need to make a POST request to ```https://api.autoscout24.com/auth/oauth/v2/token``` with the following parameters:
 
@@ -151,9 +150,9 @@ AutoScout24 supports the full set of error codes as specified in the OAuth 2.0 s
 
 ```shell
 curl https://api.autoscout24.com/auth/oauth/v2/token
--d 'grant_type=refresh_token&refresh_token={valid_refresh_token}&client_id={your_client_id}&client_secret={your_client_secret}' 
+-d 'grant_type=refresh_token&refresh_token={valid_refresh_token}&client_id={your_client_id}&client_secret={your_client_secret}'
 -X POST
-``` 
+```
 
 > ###Successful response
 > If the request is successful, you’ll see a response like this:

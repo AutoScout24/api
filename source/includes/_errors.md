@@ -19,6 +19,9 @@ Responses as well as messages are classified by their type:
 |10000|Vehicle with id {0} was succesfully deleted.|
 |10001|Image with id {0} was succesfully deleted.|
 |10003|Product with id {0} was succesfully deleted.|
+|10004|Video with id {videoId} was successfully deleted.|
+|10005|Financing offer with id {financingId} successfully deleted.|
+|10006|Publishing channel {publishingId} successfully deleted.|
 |10500|Vehicle URI on PublicationChannel {channelId} is: { URI }. Please note that it might take a couple of minutes before the URI becomes available.|
 |20001|Field particleFilter does not correspond with selected field fuelCategory. A particle filter is only available for diesel vehicles.|
 |20500|'Accept-Language' is empty or not supported. Default Culture 'en-GB' is used.|
@@ -48,7 +51,7 @@ Responses as well as messages are classified by their type:
 |50026|Please just provide deliveryDays for availabilityType 3.|
 |50027|Field {field} doesn't match expected format (between 0 and 99.9). Please provide expected format.|
 |50028|Invalid json - {json}. Please provide a valid json.|
-|50029|Field vehicleType has an invalid value. Please use C.|
+|50029|Field vehicleType has an invalid value. Please use C or B.|
 |50030|Field model does not correspond to field make.|
 |50031|Field firstRegistration is mandatory. Please provide missing field.|
 |50032|Field firstRegistration must not be older than 24 months.|
@@ -87,14 +90,14 @@ Responses as well as messages are classified by their type:
 |50071|List of values in the field {field} has duplicates. Please remove the duplicate values.|
 |50072|Field {field} must have exact length of {length} characters.|
 |50073|Field {field} must have a value from the following list: {allowedValues}.|
-|50074|You have no permission to change publications for the vehicle {vehicleId}.|
+|50074|The vehicle is not published on this channel and cannot be deleted.|
 |50075|Publication channel name must have a value from the following list: AS24, AS24Dealers.|
-|50076|ChannelDispatcher: List of publication channels is empty for the vehicle {vehicleId}. There is nothing to change.|
+|50076|A channel for this vehicle already exists. Please remove existing channel first.|
 |50077|This account is not allowed to use this channel.|
 |50080|Image does not exist.|
 |50081|List of image ids should contain the same ids returned by the GET method.|
 |50082|The body of the POST request contains no image data.|
-|50083|Image size exceedes limit.|
+|50083|Image size exceeds limit.|
 |50084|Image number limit exceeded.|
 |50085|Multiple image upload is not allowed. Please post one picture per request.|
 |50086|You're not allowed to perform actions on this image.|
@@ -109,18 +112,30 @@ Responses as well as messages are classified by their type:
 |50095|Field Subtitle must not contain < , >, urls or emails.|
 |50096|You don't have the subscriptions to book products.|
 |50097|Product booking has an unknown value. Please provide correct value from /references.|
-|50098|Provided product booking does not match subscription type. Please provide correct value from /references.|
 |50099|Provided product has an unknown value. Please provide correct value from /references.|
 |50100|A contact for this vehicle already exists. Per vehicle only one set of contact details is allowed.|
 |50101|A contact for this vehicle does not exist.|
 |50102|It's not allowed to have two phone number objects with the same phoneNumberType.|
-|50103|Invalid json. Please provide a valid json.|
-|50104|A contact for this vehicle does not exist. This vehicle can not be published without contact.|
-|50105|You are not allowed to publish this vehicle on this channel.|
-|50106|Field seals has an invalid value. Please provide supported seals.|
+|50103|Request body is empty. Please provide a valid json body object.|
+|50104|A contact for this vehicle does not exist. This vehicle cannot be published without contact.|
+|50105|You are not allowed to publish/unpublish this vehicle on this channel.|
+|50106|Field seals have an invalid value. Please provide supported seals.|
 |50107|Only german dealers are allowed to add financing offers.|
-|99901|Forbidden - You're not allowed to execute this action.|
+|50108|A financing offer for this vehicle already exists. Only one financing offer per vehicle is allowed.|
+|50109|Provided decimal has an invalid number of decimal places. Please specify at most {precision} digits after decimal point.|
+|50110|Field {field} is not available for vehicle type {vehicleType}.|
+|50200|The given uri is not a valid youtube video url.|
+|50201|ContentType header value is missing or not suitable for provided content.|
+|50202|Vehicle has already a video. Only one video per vehicle is allowed.|
+|50600|Start and/or end dates have invalid dates. Both date values need to be set properly.|
+|50601|>Requested start date is older than 365 days. KPI data is available for a maximum of 365 days.|
+|50602|Requested start date&rsquo;s value is invalid. Start date must be before end date.|
+|50603|Invalid start and/or end dates. Dates must be set to values before today's date.|
+|99901|This is an invalid operation. Please check again.|
 |99902|Invalid request - Missing access token.|
 |99903|Invalid request - Duplicate access token.|
 |99904|Invalid request - Invalid access token.|
 |99905|Invalid request - Validation error.|
+|99906|Invalid Request. Version {versionNumber} is no longer supported.|
+|99907|Invalid Request. Access to this endpoint is denied.|
+|99908|Invalid Request. Invalid API version value.|

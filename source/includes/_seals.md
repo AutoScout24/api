@@ -15,12 +15,12 @@ The Seals resource offers the needed endpoints to retrieve information about the
 curl https://api.autoscout24.com/seals \
      -X GET \
      -H "X-AS24-Version: 1.1" \
-     -H "Accept-Language: en-GB" 
+     -H "Accept-Language: en-GB"
 ```
 
 Retrieve a list of supported car seals.
 
-- Response also shows for which country a given *seal* is valid for (e.g. German dealers should only attach German used car seals to their vehicles).
+- Response also shows which country a given *seal* is valid for (e.g. German dealers should only attach German used car seals to their vehicles).
 - Please note that all vehicles possessing a used car seal are subject to further checks by AutoScout24. Vehicles might therefore be listed without the initially requested car seal.
 
 
@@ -130,12 +130,12 @@ For the list of possible **error codes** in the `_response` object of the Respon
 curl https://api.autoscout24.com/seals/166 \
      -X GET \
      -H "X-AS24-Version: 1.1" \
-     -H "Accept-Language: en-GB" 
+     -H "Accept-Language: en-GB"
 ```
 
 Retrieve details of a given car seal.
 
-- Response also shows for which country a given *seal* is valid for (e.g. German dealers should only attach German used car seals to their vehicles).
+- Response also shows which country a given *seal* is valid for (e.g. German dealers should only attach German used car seals to their vehicles).
 - Please note that all vehicles possessing a used car seal are subject to further checks by AutoScout24. Vehicles might therefore be listed without the initially requested car seal.
 
 ###Parameters
@@ -212,4 +212,3 @@ The following table shows the fields that are contained in the `_data` object of
 ### Error Codes
 
 For the list of possible **error codes** in the `_response` object of the Response payload, please click <a href="#errors">here</a>.
-

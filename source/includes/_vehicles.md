@@ -1,4 +1,4 @@
-# Resource - Vehicles 
+# Resource - Vehicles
 
 This resource manages the complete lifecycle of a vehicle on the AutoScout24 marketplace. This includes inserting, updating, retrieving, and deleting the information of a vehicle.
 
@@ -125,7 +125,7 @@ Please note that after successful creation of a new vehicle this must still be p
 - The *firstRegistration* date must not be more than 12 months in the past for pre-registered vehicles (*vehicleOfferType* = S).
 - The *firstRegistration* date must be more than 360 months (30 years) in the past for classic vehicles/oldtimers (*vehicleOfferType* = O).
 - The *mileage* must be set and greater than 0 for employee’s vehicles, pre-registered vehicles, classic vehicles/oldtimers and used vehicles (*vehicleOfferType* = J, S, O or U).
-- The *mileage* must be smaller than 1000 for new and demonstration vehicles (*vehicleOfferType* = N or D).
+- The *mileage* must be smaller than 1000 for new and demonstration vehicles (*vehicleOfferType* = N).
 - No *previousOwners* are allowed for new vehicles (*vehicleOfferType* = N). Pre-registered vehicles (*vehicleOfferType* = S) must not have more than one *previousOwner*. A demonstration vehicle (*vehicleOfferType* = D) must have at least one *previousOwner*.
 - EnVKV rules (Energieverbrauchskennzeichnungsverordnung): Vehicles with *vehicleType = C (Car)* of German dealers with *vehicleOfferType* = N (New), D (Demonstration) or S (Pre-registered) can only be processed if they carry the following field information: *co2* (unless *primaryFuelType* = 12/Electric), *efficiencyClass*, *electricConsumptionCombined* (only if *primaryFuelType* = 12/Electric), *fuelConsumptionCombined* (unless *primaryFuelType* = 12/Electric), *primaryFuelType*.
 
@@ -146,7 +146,7 @@ Please note that after successful creation of a new vehicle this must still be p
 
 Here you can find syntax requirements for all attributes used for the vehicle object which is used in the body of the POST HTTP request message.
 
-*Hint: string length is counted as total of UFT-8 characters.*
+*Note: string length is counted as total of UFT-8 characters.*
 
 |Field Name|Vehicle Type|Type|Mandatory|Format|Description|
 |----|----|----|----|----|----|
@@ -157,16 +157,16 @@ Here you can find syntax requirements for all attributes used for the vehicle ob
 |cabOrRental|C|boolean|Yes||Needs to be set to TRUE if the vehicle has been used as cab or rental car.|
 |countryVersion|C|string||enumerated|Indicates the original market/country the vehicle was built for. Allowed values can be retrieved via resource /references (countries).|
 |cylinderCapacity|C/B|integer||between 1 and 99999|Volume of the engine's cylinders in `ccm = cubic centimeters`.|
-|cylinders|C/B|integer||between 1 and 99|C/B|number of cylinders of the engine.|
+|cylinders|C/B|integer||between 1 and 99|number of cylinders of the engine.|
 |description|C/B|string||maxLength=4000|Free text description of the vehicle. Text may be formatted by tags. Supported formatting elements and syntax rules can be retrieved <a href="#formatting-options-vehicle-description-field">below.</a>|
-|doors|C|integer||between 1 and 9|C/B|number of doors of the vehicle.|
+|doors|C|integer||between 1 and 9|number of doors of the vehicle.|
 |driveType|C|string||enumerated|Drive type of the vehicle (e.g. front, rear, 4WD). Allowed values can be retrieved via resource /references.|
 |emission|C/B|<a href="#emission-object">Emission</a>|Yes||Provides emission information about the vehicle. Consists of co2, efficiencyClass, emissionsSticker, fuel, particleFilter, pollutionClass.|
 |emptyWeight|C/B|integer||between 1 and 99999|Vehicle's weight without driver, passengers or liquids (like fuel) in `kg`.|
 |equipment|C/B|array, integer||enumerated|List of vehicle's equipment. Allowed values can be retrieved via resource /references.|
 |firstRegistration|C/B|string|Yes|YYYY-MM|Month and year of first registration of the vehicle.|
 |fuelCategory|C/B|string|Yes (non-caravan vehicles)|enumerated|Category of fuel/energy source for the vehicle. Allowed values can be retrieved via resource /references.|
-|gears|C/B|integer||between 1 and 9|C/B|number of gears of the vehicle.|
+|gears|C/B|integer||between 1 and 9|number of gears of the vehicle.|
 |hsn|C/B|string||exactLength=4, content must be an integer value|HSN = Herstellerschluesselnummer: Unique identifier of vehicle manufacturer in Germany. In combination with TSN this key is used to uniquely identify a vehicle type. The make of a vehicle can be fully derived from this identifier.|
 |identifier|C/B|<a href="#identifier-object">Identifier</a>|||Provides identification information for the vehicle. Consists of crossReference, offerReference, vehicleId.|
 |includedService|C/B|array, integer||enumerated|Included services as part of the vehicle offer. Allowed values can be retrieved via resource /references. Example: Id 1 (= HU/AU neu) indicates that a vehicle's last technical inspection as required by German regulations has been done recently. Should only be set if last technical inspection was done not more than 3 months ago.|
@@ -175,15 +175,15 @@ Here you can find syntax requirements for all attributes used for the vehicle ob
 |maintenance|C/B|<a href="#maintenance-object">Maintenance</a>|Yes||Provides maintenance information for the vehicle. Consists of fullServiceHistory, lastCamBeltService, lastTechnicalService, nextInspection.|
 |make|C/B|integer|Yes|enumerated, greater 0|Make of the vehicle.|
 |metallic|C/B|boolean|Yes||Needs to be set to TRUE if vehicle's body color has a metallic effect.|
-|mileage|C/B|integer||between 0 and 9999999|C/B|number of kilometers `km` the vehicle has run.|
+|mileage|C/B|integer||between 0 and 9999999|number of kilometers `km` the vehicle has run.|
 |model|C/B|integer|Yes|enumerated, greater 0|Model of the vehicle.|
 |modelVersion|C/B|string||maxLength=50|Additional non-generic vehicle model description (e.g. Cross, Ambition, Elegance, 2.0).|
 |nonSmoking|C|boolean|Yes||Needs to set to TRUE if the vehicle has been used by non-smokers only.|
-|powerKw|C/B|integer|Yes (non-caravan vehicles)|greater 0|Engine power in `kW`. Power in (German) `PS` does not need to be specified. It will automatically be derived from this value.|
-|previousOwners|C/B|integer||between 0 and 99|C/B|number of previous vehicle owners.|
+|powerKw|C/B|integer|Yes (non-caravan vehicles)|between 1 and 999|Engine power in `kW`. Power in (German) `PS` does not need to be specified. It will automatically be derived from this value.|
+|previousOwners|C/B|integer||between 0 and 99|number of previous vehicle owners.|
 |prices|C/B|array, <a href="#price-object">Price</a>|Yes||Provides price information for the vehicle. Consists of currency, negotiable, price, priceType, taxDeductible.|
 |seals|C/B|array, integer||enumerated|List of used car seals granted for the vehicle. Allowed values can be retrieved via resource /seals.|
-|seats|C|integer||between 1 and 99|C/B|number of seats of the vehicle.|
+|seats|C|integer||between 1 and 99|number of seats of the vehicle.|
 |transmission|C/B|string||enumerated|Specifies the transmission type of the vehicle (e.g. manual, automatic). Allowed values can be retrieved via resource /references.|
 |tsn|C/B|string||exactLength=3|TSN = Typschluesselnummer: Identifier used by vehicle manufacturers in Germany to specify a vehicle type. From TSN the following parameters can be derived: Model, body, engine type, fuel type etc. Combined with HSN a make/model combination can be fully specified.|
 |upholstery|C|string||enumerated|Upholstery of the vehicle (e.g. full leather, part leather, cloth). Allowed values can be retrieved via resource /references.|
@@ -915,7 +915,7 @@ Update details of an existing vehicle.
 - The *mileage* must be set and greater than 0 for employee’s vehicles, pre-registered vehicles, classic vehicles/oldtimers and used vehicles (*vehicleOfferType* = J, S, O or U).
 - The *mileage* must be smaller than 1000 for new and demonstration vehicles (*vehicleOfferType* = N or D).
 - No *previousOwners* are allowed for new vehicles (*vehicleOfferType* = N). Pre-registered vehicles (*vehicleOfferType* = S) must not have more than one *previousOwner*. A demonstration vehicle (*vehicleOfferType* = D) must have at least one *previousOwner*.
-- EnVKV rules (Energieverbrauchskennzeichnungsverordnung): Vehicles with *vehicleType = C (Car)* of German dealers with *vehicleOfferType* = N (New), D (Demonstration) or S (Pre-registered) can only be processed if they carry the following field information: *co2* (unless *primaryFuelType* = 12/Electric), *efficiencyClass*, *electricConsumptionCombined* (only if *primaryFuelType* = 12/Electric), *fuelConsumptionCombined* (unless *primaryFuelType* = 12/Electric), *primaryFuelType*.
+- **GERMAN DEALERS ONLY:** EnVKV rules (Energieverbrauchskennzeichnungsverordnung): Vehicles with *vehicleType = C (Car)* of German dealers with *vehicleOfferType* = N (New), D (Demonstration) or S (Pre-registered) can only be processed if they carry the following field information: *co2* (unless *primaryFuelType* = 12/Electric), *efficiencyClass*, *electricConsumptionCombined* (only if *primaryFuelType* = 12/Electric), *fuelConsumptionCombined* (unless *primaryFuelType* = 12/Electric), *primaryFuelType*.
 
 
 ###Parameters

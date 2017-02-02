@@ -1,6 +1,6 @@
 # Resource - Products
 
-The Products resource is a sub-resource of the Vehicle resource. It manages the lifecycle of advertising products that can be atached to an existing vehicle. 
+The Products resource is a sub-resource of the Vehicle resource. It manages the lifecycle of advertising products that can be atached to an existing vehicle.
 
 ## Book an Ad Product
 
@@ -24,11 +24,11 @@ curl https://api.autoscout24.com/vehicles/7e59591f-c5a3-974e-e452-2951040ae4ee/p
          }'
 ```
 
-Attach an ad product to an existing vehicle. 
+Attach an ad product to an existing vehicle.
 
 Please note that product bookings will be charged to the dealer in question on a daily basis.
 
-For product bookings an optional subtitle can be posted (Type=string, maxLength=55). 
+For product bookings an optional subtitle can be posted (Type=string, maxLength=55).
 Subtitles will be shown as part of the vehicle information on a search result list page. The additional subtitle can be used to further highlight specific features of a vehicle.
 
 **Semantic Rules**
@@ -68,7 +68,7 @@ Detailed information on these ad products in Germany can be found by clicking <a
 
 ### Payload Parameters
 
-*Hint: string length is counted as total of UFT-8 characters.*
+*Note: string length is counted as total of UFT-8 characters.*
 
 |Field Name|Type|Mandatory|Format|Description|
 |----|----|----|----|----|
@@ -122,10 +122,10 @@ For the list of possible **error codes** in the `_response` object of the Respon
 
 ```shell
 curl https://api.autoscout24.com/vehicles/7e59591f-c5a3-974e-e452-2951040ae4ee/products \
-     -X GET 
+     -X GET
      -H "X-AS24-Version: 1.1" \
      -H "Accept-Language: en-GB" \
-     -H "Authorization: Bearer e7c00b24-9f5f-4909-88de-38f8d7ca08bf" 
+     -H "Authorization: Bearer e7c00b24-9f5f-4909-88de-38f8d7ca08bf"
 ```
 
 Retrieve ad product information for an existing vehicle.
@@ -205,7 +205,7 @@ The following table shows the fields that are contained in the `_data` object of
 
 
 <span id="ProductObject"></span>
-###Product Object 
+###Product Object
 
 |Field Name|Type|Description|
 |----|----|----|
@@ -232,7 +232,7 @@ curl https://api.autoscout24.com/vehicles/b78d27e2-671a-47w6-80ab-d3726d7782c7/p
      -X DELETE \
      -H "X-AS24-Version: 1.1" \
      -H "Accept-Language: en-GB" \
-     -H "Authorization: Bearer e7c00b24-9f5f-4909-88de-38f8d7ca08bf" 
+     -H "Authorization: Bearer e7c00b24-9f5f-4909-88de-38f8d7ca08bf"
 ```
 
 Terminate an existing product booking for a given vehicle.

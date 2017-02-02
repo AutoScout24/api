@@ -14,7 +14,7 @@ curl https://api.autoscout24.com/vehicles/b78d27e2-671a-47w6-80ab-d3726d7782c7/i
      -X GET \
      -H "X-AS24-Version: 1.1" \
      -H "Accept-Language: en-GB" \
-     -H "Authorization: Bearer e7c00b24-9f5f-4909-88de-38f8d7ca08bf" 
+     -H "Authorization: Bearer e7c00b24-9f5f-4909-88de-38f8d7ca08bf"
 ```
 
 Retrieve sorting order and details of existing vehicle images.
@@ -74,6 +74,7 @@ The HTTP response message that's received has the following body attributes:
 |_data|<a href="#imageOrderData">Data</a>|The data object which contains the actual information that was asked for in the sent HTTP request. Below you can find the attributes that this object has.|
 
 <span id="imageOrderData"></span>
+
 ###Image Order Data Object
 
 The following table shows the fields that are contained in the `_data` object of the Response Payload:
@@ -85,7 +86,6 @@ The following table shows the fields that are contained in the `_data` object of
 ### Error Codes
 
 For the list of possible **error codes** in the `_response` object of the Response payload, please click <a href="#errors">here</a>.
-
 
 ## Update Image Order
 
@@ -105,7 +105,7 @@ curl https://api.autoscout24.com/vehicles/b78d27e2-671a-47w6-80ab-d3726d7782c7/i
      -d '[ \
        "1322014969", \
        "1322014787" \
-     ]' 
+     ]'
 ```
 
 Update sorting order and details of existing vehicle images.
@@ -130,7 +130,7 @@ The first image in the sequence identifies the vehicle’s main image.
 
 ### Request Payload Parameters
 
-The HTTP request body is an array that contains the IDs of the images. The index of each String value in the array represents the the order of the image, e.g.: 
+The HTTP request body is an array that contains the IDs of the images. The index of each String value in the array represents the the order of the image, e.g.:
 
 `["1322014969","1322014787"]`
 

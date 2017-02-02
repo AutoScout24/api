@@ -19,9 +19,11 @@ includes:
   - vehicles
   - images
   - imageOrder
+  - videos
   - publications
   - products
   - financingOffers
+  - statistics
   - makes
   - models
   - seals
@@ -31,5 +33,3 @@ includes:
 
 search: true
 ---
-
-
