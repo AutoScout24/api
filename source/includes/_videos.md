@@ -336,9 +336,9 @@ Delete an existing vehicle's video.
     "type": "Success",
     "messages": [
       {
-        "code": 10004,
-        "messageType": "Info",
-        "text": "Video with id e1f3ac50-c184-42cc-b9e0-a82c141929b1 was successfully deleted."
+	"code": 10004,
+	"messageType": "Info",
+	"text": "Video with id e1f3ac50-c184-42cc-b9e0-a82c141929b1 was successfully deleted."
       }
     ]
   }
