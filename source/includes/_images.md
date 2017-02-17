@@ -106,7 +106,7 @@ curl https://api.autoscout24.com/vehicles/7e59591f-c5a3-974e-e452-2951040ae4ee/i
      -X GET \
      -H "X-AS24-Version: 1.1" \
      -H "Accept-Language: en-GB" \
-     -H "Authorization: Bearer e7c00b24-9f5f-4909-88de-38f8d7ca08bf" 
+     -H "Authorization: Bearer e7c00b24-9f5f-4909-88de-38f8d7ca08bf"
 ```
 
 Retrieve all existing images of a vehicle.
@@ -181,7 +181,7 @@ The following table shows the fields that are contained in the `_data` object of
 
 
 <span id="ImageObject1"></span>
-###Image Object 
+###Image Object
 
 The following table shows the fields that are contained in the `_data` object of the Response Payload:
 
@@ -208,7 +208,7 @@ curl https://api.autoscout24.com/vehicles/b78d27e2-671a-47w6-80ab-d3726d7782c7/i
      -X GET \
      -H "X-AS24-Version: 1.1" \
      -H "Accept-Language: en-GB" \
-     -H "Authorization: Bearer 73a06d83-6e13-4444-a288-6aa8c4098c2f" 
+     -H "Authorization: Bearer 73a06d83-6e13-4444-a288-6aa8c4098c2f"
 ```
 
 Retrieve details of an existing vehicle image.
@@ -279,7 +279,7 @@ The following table shows the fields that are contained in the `_data` object of
 
 
 <span id="ImageObject2"></span>
-###Image Object 
+###Image Object
 
 The following table shows the fields that are contained in the `_data` object of the Response Payload:
 
@@ -370,7 +370,7 @@ The HTTP response message that's received has the following body attributes:
 For the list of possible **error codes** in the `_response` object of the Response payload, please click <a href="#errors">here</a>.
 
 
-## Delete a Vehicle
+## Delete an Image
 
 > ###Endpoint
 > `DELETE` /vehicles/{vehicleId}/images/{imageId}
@@ -384,7 +384,7 @@ curl https://api.autoscout24.com/vehicles/b78d27e2-671a-47w6-80ab-d3726d7782c7/i
      -X DELETE \
      -H "X-AS24-Version: 1.1" \
      -H "Accept-Language: en-GB" \
-     -H "Authorization: Bearer e7c00b24-9f5f-4909-88de-38f8d7ca08bf" 
+     -H "Authorization: Bearer e7c00b24-9f5f-4909-88de-38f8d7ca08bf"
 ```
 
 Delete an existing vehicle image.
