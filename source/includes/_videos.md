@@ -80,7 +80,7 @@ AutoScout24 hat das Recht, Videos, die die oben stehenden Anforderungen nicht er
 }
 ```
 
-# Response Payload Parameters
+### Response Payload Parameters
 
 The HTTP response message that's received has the following body attributes:
 
