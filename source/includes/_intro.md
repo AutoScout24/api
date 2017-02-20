@@ -39,6 +39,7 @@ Should this comprehensive online documentation not answer your questions please 
 /vehicles/{vehicledId}/financingoffers/{financingofferId}
 /statistics
 /statistics/statisticId
+/customerdetails
 /makes
 /makes/{makeId}
 /makes/{makeId}/models

@@ -24,6 +24,7 @@ includes:
   - products
   - financingOffers
   - statistics
+  - customerDetails
   - makes
   - models
   - seals

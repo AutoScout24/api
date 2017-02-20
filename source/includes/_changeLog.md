@@ -11,6 +11,13 @@ This section documents all the changes on the AutoScout24 RESTful API. This incl
 |1.1|22.02.2016| - |
 |1.0|01.04.2015|22.08.2016 |
 
+##February 20th, 2017 - API version 1.1
+
+###New features
+
+#### - CustomerDetails
+Data providers can now retrieve customer details.
+
 ##April 12th, 2016 - API version 1.1
 
 ###New Features
