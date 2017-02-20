@@ -39,7 +39,7 @@ AutoScout24 hat das Recht, Videos, die die oben stehenden Anforderungen nicht er
 ### Parameters
 
 |Parameter Name|Type|Mandatory|Description|
-|----|----|----|
+|----|----|----|----|
 |vehicleID|URI Parameter|Yes|Unique identifier for a given vehicle.|
 
 ### Headers
@@ -56,7 +56,7 @@ AutoScout24 hat das Recht, Videos, die die oben stehenden Anforderungen nicht er
 *Note: string length is counted as total of UFT-8 characters.*
 
 |Field Name|Type|Mandatory|Format|Description|
-|----|----|----|
+|----|----|----|----|----|
 |videoUrl|string|yes|youtube video URL|The URL of the vehicle video to be attached.|
 
 ### Response Example
