@@ -52,4 +52,4 @@ Should this comprehensive online documentation not answer your questions please 
 
 ![Resources Image][resources]
 
-[resources]: /images/resources.jpg
+[resources]: images/resources.jpg
