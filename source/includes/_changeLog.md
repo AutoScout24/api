@@ -16,7 +16,7 @@ This section documents all the changes on the AutoScout24 RESTful API. This incl
 ###New features
 
 #### - CustomerDetails
-Data providers can now retrieve customer details.
+Data providers can now retrieve customer details including the customer identification number (Sell-ID) for a valid access token.
 
 ##April 12th, 2016 - API version 1.1
 

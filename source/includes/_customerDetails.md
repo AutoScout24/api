@@ -1,6 +1,6 @@
 # Resource - CustomerDetails
 
-The CustomerDetails resource is used to display customer details based on the authentication token.
+The CustomerDetails resource is used to display customer details based on the authentication token. The information retrieved includes the customer identification number (Sell-ID) this token is linked to.
 
 ## Retrieve customer details
 
@@ -90,7 +90,7 @@ The following table shows the fields that are contained in the `customerdetails`
 
 |Field Name|Type|Description|
 |----|----|----|
-|sellId|String|Customer identification number from the AutoScout24 CRM system|
+|sellId|String|Customer identification number (Sell-ID) from the AutoScout24 CRM system|
 |companyName|String|The name of the customer company|
 |address|Object|Object containing details of the address of the customer|
 
