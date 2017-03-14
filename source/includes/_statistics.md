@@ -263,7 +263,7 @@ Retrieve performance metrics of a specific vehicle. Using this endpoint, perform
 
 **Semantic Rules**
 
-- >Statistics are calculated on a daily basis. The first statistics result might take up to 24 hours after having the vehicle listing on the AutoScout24 marketplace.
+- Statistics are calculated on a daily basis. The first statistics result might take up to 24 hours after having the vehicle listing on the AutoScout24 marketplace.
 - Statistics results can be filtered based on a date period. The *start* and *end* URL query parameters are used to filter statistics results based on start and end date.
 - The date is represented using the ISO 8601 format: YYYY-MM-dd.
 - *start* and *end* query parameters have to be specified, otherwise the statistics of the vehicle since the creation date are returned.
@@ -281,7 +281,7 @@ Retrieve performance metrics of a specific vehicle. Using this endpoint, perform
 
 |Query parameter Name|Data Type|Mandatory|Description|
 |----|----|----|----|
-|start|date|yes|The start date of when to fetch statistics. This value should be represented based on the ISO 8601 format: YYYY-MM-dd<|
+|start|date|yes|The start date of when to fetch statistics. This value should be represented based on the ISO 8601 format: YYYY-MM-dd|
 |end|date|yes|The end date for the date period to fetch statistics. This value should be represented based on the ISO 8601 format: YYYY-MM-dd|
 
 > ###Response Example

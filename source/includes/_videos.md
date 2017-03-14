@@ -123,7 +123,7 @@ curl https://api.autoscout24.com/vehicles/7e59591f-c5a3-974e-e452-2951040ae4ee/v
 |----|----|----|----|
 |X-AS24-Version|String|Yes|Defines the API version used to serve the request. Current version number is 1.1|
 |Accept-Language|String|No|Language used for returning results, e.g. en-GB.|
-<Accept|String||Yes|The Bearer authentication token that was received via the OAuth authentication process.|
+Accept|String||Yes|The Bearer authentication token that was received via the OAuth authentication process.|
 |Authorization|String|Yes|The Bearer authentication token that was received via the OAuth authentication process.|
 
 ### Response Example
