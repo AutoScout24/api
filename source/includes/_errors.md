@@ -65,7 +65,7 @@ Responses as well as messages are classified by their type:
 |50041|Field model has an invalid value. Please provide supported model. |
 |50043|Field lastCamBeltService must be in the past. |
 |50044|Field lastTechnicalService must be in the past.|
-|50045|Field nextInspection must be in the future.|
+|50045|Field nextInspection must be between {from} and {to}.|
 |50046|Field previousOwner must not have more than 1 previous owner for vehicleOfferType = S.|
 |50047|Field previousOwner must  have at least 1 previous owner for vehicleOfferType = D.|
 |50048|Field deliveryDate must be in the future.|
