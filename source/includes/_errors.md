@@ -139,3 +139,4 @@ Responses as well as messages are classified by their type:
 |99906|Invalid Request. Version {versionNumber} is no longer supported.|
 |99907|Invalid Request. Access to this endpoint is denied.|
 |99908|Invalid Request. Invalid API version value.|
+|99913|Invalid Request. X-AS24-Version is missing.|
