@@ -86,7 +86,7 @@ A new Financing Offers sub-resource `/vehicles/{vehicleId}/financingoffers` was 
 The link to the detail page is now returned when published a vehicle on a specific channel. In addition, the Channel's respective detail page URI is returned when requesting information about the publication channels. For more information, please check the <a href="#resource-publications">/publications resource</a>.
 
 #### - Version Header:
-A new HTTP header `X-AS24-Version` was introduced to explicitly define which version the consumer application is trying to communicate with.
+A new HTTP header `X-AS24-Version` was introduced to explicitly define which version the consumer application is trying to communicate with. This header is mandatory for all the requests to the API.
 
 ###Changes On v1.0
 
