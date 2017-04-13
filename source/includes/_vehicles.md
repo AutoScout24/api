@@ -19,6 +19,7 @@ curl https://api.autoscout24.com/vehicles \
      -H "Authorization: Bearer 4d774163-fedf-4454-83f0-1eb134872294" \
      -d '{ \
             "accident": false, \
+            "alloyWheelSize": 18
             "availability": \
             {\
               "availabilityType": 3, \
@@ -54,7 +55,7 @@ curl https://api.autoscout24.com/vehicles \
               } \
             }, \
             "emptyWeight": 1200, \
-            "equipment": [1, 2, 4], \
+            "equipment": [1, 2, 4, 15], \
             "firstRegistration": "2011-11", \
             "fuelCategory": "B", \
             "gears": 6, \
@@ -151,6 +152,7 @@ Here you can find syntax requirements for all attributes used for the vehicle ob
 |Field Name|Vehicle Type|Type|Mandatory|Format|Description|
 |----|----|----|----|----|----|
 |accident|C/B|boolean|Yes||Needs to be set to TRUE if vehicle got damaged in the past irrespective of whether the damage has been fixed or not. Damages by accident, water, hailstorm, fire or alike must be indicated by this flag. |
+|alloyWheelSize|C|integer|No|between 10 and 26|Size of alloy wheels of the vehicle (in inches). Only the following values are allowed: 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26. Equipment Alloy Wheels (id=15) must be also set when specifying the size.|
 |availability|C/B|<a href="#availability-object">Availability</a>|Yes||Provides information about when the vehicle is available from or can be delivered. Consists of availabilityType, deliveryDate, deliveryDays.|
 |bodyColor|C/B|integer|Yes|enumerated|Basic body color of the vehicle. Used to enable search by basic exterior color. Allowed values can be retrieved via resource /references.|
 |bodyColorName|C/B|string||maxLength=30|Manufacturers name of body color (Examples: British Racing Green, Black Oak Metallic).|

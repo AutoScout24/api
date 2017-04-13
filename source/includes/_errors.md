@@ -131,6 +131,7 @@ Responses as well as messages are classified by their type:
 |50601|>Requested start date is older than 365 days. KPI data is available for a maximum of 365 days.|
 |50602|Requested start date&rsquo;s value is invalid. Start date must be before end date.|
 |50603|Invalid start and/or end dates. Dates must be set to values before today's date.|
+|50607|Please also send alloy wheels as an equipment when specifying an alloyWheelSize.|
 |99901|This is an invalid operation. Please check again.|
 |99902|Invalid request - Missing access token.|
 |99903|Invalid request - Duplicate access token.|

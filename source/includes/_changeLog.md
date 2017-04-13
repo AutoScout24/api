@@ -11,6 +11,14 @@ This section documents all the changes on the AutoScout24 RESTful API. This incl
 |1.1|22.02.2016| - |
 |1.0|01.04.2015|22.08.2016 |
 
+##April 18th, 2017 - API version 1.1
+
+###New features
+
+#### - AlloyWheelSize
+
+Introduction of AlloyWheelSize as a new attribute for car listings.
+
 ##February 20th, 2017 - API version 1.1
 
 ###New features
