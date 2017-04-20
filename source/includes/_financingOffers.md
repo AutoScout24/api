@@ -71,7 +71,7 @@ Please note that AutoScout24 can only add one financing offer per vehicle at the
 |Field Name|Type|Mandatory|Format|Description|
 |----|----|----|----|----|
 |annualPercentageRate|Number|yes|Only between 0.00 and 99.99|Annual percentage rate in `%`.|
-|bank|string|yes|150 character allowed|Name, legal form, address, postal code and city of bank partner need to be transmitted. e.g. Mercedes-Benz Bank AG, Siemensstraße 7, 70469 Stuttgart|
+|bank|string|yes|600 character allowed|Name, legal form, address, postal code and city of bank partner need to be transmitted here (e.g. Mercedes-Benz Bank AG, Siemensstraße 7, 70469 Stuttgart) as well as other financing offer conditions: Please indicate here whether your financing offer requires the conclusion of an insurance contract or a contract for other supplementary benefits. If the cost of this contract cannot be determined in advance, please indicate the obligation to conclude this contract (e.g. compulsory conclusion of a comprehensive insurance contract).|
 |debitInterestType|Enum|yes|Values: 1=bound , 2=changeable , 3=combined|Debit interest type (bound, changeable, combined) needs to be specified.|
 |debitInterestRate|Number|yes|Only between 0.00 and 99.99|Debit interest rate in `%`|
 |duration|Integer|yes|Only between 1 - 999|Indicates the duration of the loan contract in `months`.|
