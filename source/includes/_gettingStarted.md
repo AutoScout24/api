@@ -1,4 +1,4 @@
-# Getting Started
+# Getting Started - Listing Creation API (Upload)
 
 The AutoScout24 API provides a RESTful API to write and extract the AutoScout24 content. All API requests use the standard HTTP methods (GET, POST, PUT, DELETE) to perform operations on resource URLs. JSON is used to represent the responses of the sent HTTP requests. In addition, the JSON responses contain additional hypermedia information of related resources.
 
