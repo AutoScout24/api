@@ -313,7 +313,11 @@ curl https://api.autoscout24.com/vehicles/b78d27e2-671a-47w6-80ab-d3726d7782c7/i
      -F "file=@carFoto.jpg"
 ```
 
-Update an existing vehicle's image.
+<font color="red">
+!!! ATTENTION !!!
+This method is only available until 31st July 2017 and will no longer be available afterwards.
+Please make sure that your application is no longer using this functionality until the end of July 2017!
+</font>
 
 ###Parameters
 
