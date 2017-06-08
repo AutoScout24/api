@@ -915,7 +915,7 @@ Update details of an existing vehicle.
 - The *firstRegistration* date must not be more than 12 months in the past for pre-registered vehicles (*vehicleOfferType* = S).
 - The *firstRegistration* date must be more than 360 months (30 years) in the past for classic vehicles/oldtimers (*vehicleOfferType* = O).
 - The *mileage* must be set and greater than 0 for employee’s vehicles, pre-registered vehicles, classic vehicles/oldtimers and used vehicles (*vehicleOfferType* = J, S, O or U).
-- The *mileage* must be smaller than 1000 for new and demonstration vehicles (*vehicleOfferType* = N or D).
+- The *mileage* must be smaller than 1000 for new vehicles (*vehicleOfferType* = N).
 - No *previousOwners* are allowed for new vehicles (*vehicleOfferType* = N). Pre-registered vehicles (*vehicleOfferType* = S) must not have more than one *previousOwner*. A demonstration vehicle (*vehicleOfferType* = D) must have at least one *previousOwner*.
 - **GERMAN DEALERS ONLY:** EnVKV rules (Energieverbrauchskennzeichnungsverordnung): Vehicles with *vehicleType = C (Car)* of German dealers with *vehicleOfferType* = N (New), D (Demonstration) or S (Pre-registered) can only be processed if they carry the following field information: *co2* (unless *primaryFuelType* = 12/Electric), *efficiencyClass*, *electricConsumptionCombined* (only if *primaryFuelType* = 12/Electric), *fuelConsumptionCombined* (unless *primaryFuelType* = 12/Electric), *primaryFuelType*.
 
