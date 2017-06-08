@@ -903,7 +903,7 @@ Update details of an existing vehicle.
 
 **Semantic Rules**
 
-See semantic rules description on [POST method](/#create-vehicle)
+See semantic rules description on [POST method](#create-vehicle)
 
 ###Parameters
 
