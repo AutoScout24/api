@@ -115,7 +115,7 @@ Please note that after successful creation of a new vehicle this must still be p
 
 **Semantic Rules**
 
-- *vehicleType* has to be specified; use (*vehicleType = C*) for inserting Cars and (*vehicleType = B*) for inserting Bikes.
+- Use (*vehicleType = C*) for inserting Cars and (*vehicleType = B*) for inserting Bikes.
 - Fields with type = string must not contain URLs, E-Mail addresses or prohibited characters < or >.
 - Selected *make* and *model* for a vehicle must match.
 - Setting a *priceType* = 'Public price' is mandatory for any vehicle.
@@ -126,10 +126,9 @@ Please note that after successful creation of a new vehicle this must still be p
 - The *firstRegistration* date must not be more than 12 months in the past for pre-registered vehicles (*vehicleOfferType* = S).
 - The *firstRegistration* date must be more than 360 months (30 years) in the past for classic vehicles/oldtimers (*vehicleOfferType* = O).
 - The *mileage* must be set and greater than 0 for employee’s vehicles, pre-registered vehicles, classic vehicles/oldtimers and used vehicles (*vehicleOfferType* = J, S, O or U).
-- The *mileage* must be smaller than 1000 for new and demonstration vehicles (*vehicleOfferType* = N).
+- The *mileage* must be smaller than 1000 for new vehicles (*vehicleOfferType* = N).
 - No *previousOwners* are allowed for new vehicles (*vehicleOfferType* = N). Pre-registered vehicles (*vehicleOfferType* = S) must not have more than one *previousOwner*. A demonstration vehicle (*vehicleOfferType* = D) must have at least one *previousOwner*.
-- EnVKV rules (Energieverbrauchskennzeichnungsverordnung): Vehicles with *vehicleType = C (Car)* of German dealers with *vehicleOfferType* = N (New), D (Demonstration) or S (Pre-registered) can only be processed if they carry the following field information: *co2* (unless *primaryFuelType* = 12/Electric), *efficiencyClass*, *electricConsumptionCombined* (only if *primaryFuelType* = 12/Electric), *fuelConsumptionCombined* (unless *primaryFuelType* = 12/Electric), *primaryFuelType*.
-
+- **GERMAN DEALERS ONLY:** EnVKV rules (Energieverbrauchskennzeichnungsverordnung): Vehicles with *vehicleType = C (Car)* of German dealers with *vehicleOfferType* = N (New), D (Demonstration) or S (Pre-registered) can only be processed if they carry the following field information: *co2* (unless *primaryFuelType* = 12/Electric), *efficiencyClass*, *electricConsumptionCombined* (only if *primaryFuelType* = 12/Electric), *fuelConsumptionCombined* (unless *primaryFuelType* = 12/Electric), *primaryFuelType*.
 
 ###Headers
 
@@ -904,21 +903,7 @@ Update details of an existing vehicle.
 
 **Semantic Rules**
 
-- Use (*vehicleType = C*) for inserting Cars and (*vehicleType = B*) for inserting Bikes.
-- Fields with type = string must not contain URLs, E-Mail addresses or prohibited characters < or >.
-- Selected *make* and *model* for a vehicle must match.
-- Setting a *priceType* = 'Public price' is mandatory for any vehicle.
-- The *priceType* = 'Dealer price' for a vehicle cannot be higher than public price.
-- Vehicles that are not available immediately must either carry a *deliveryDate* or delivery period in days (*deliveryDays*).
-- Indicating a *firstRegistration* date is mandatory except for new and demonstration vehicles (*vehicleOfferType* = N or D).
-- The *firstRegistration* date must not be more than 24 months in the past for employee’s vehicles (*vehicleOfferType* = J).
-- The *firstRegistration* date must not be more than 12 months in the past for pre-registered vehicles (*vehicleOfferType* = S).
-- The *firstRegistration* date must be more than 360 months (30 years) in the past for classic vehicles/oldtimers (*vehicleOfferType* = O).
-- The *mileage* must be set and greater than 0 for employee’s vehicles, pre-registered vehicles, classic vehicles/oldtimers and used vehicles (*vehicleOfferType* = J, S, O or U).
-- The *mileage* must be smaller than 1000 for new vehicles (*vehicleOfferType* = N).
-- No *previousOwners* are allowed for new vehicles (*vehicleOfferType* = N). Pre-registered vehicles (*vehicleOfferType* = S) must not have more than one *previousOwner*. A demonstration vehicle (*vehicleOfferType* = D) must have at least one *previousOwner*.
-- **GERMAN DEALERS ONLY:** EnVKV rules (Energieverbrauchskennzeichnungsverordnung): Vehicles with *vehicleType = C (Car)* of German dealers with *vehicleOfferType* = N (New), D (Demonstration) or S (Pre-registered) can only be processed if they carry the following field information: *co2* (unless *primaryFuelType* = 12/Electric), *efficiencyClass*, *electricConsumptionCombined* (only if *primaryFuelType* = 12/Electric), *fuelConsumptionCombined* (unless *primaryFuelType* = 12/Electric), *primaryFuelType*.
-
+See semantic rules description on [POST method](/#create-vehicle)
 
 ###Parameters
 
