@@ -11,13 +11,15 @@ This section documents all the changes on the AutoScout24 RESTful API. This incl
 |1.1|22.02.2016| - |
 |1.0|01.04.2015|22.08.2016 |
 
+##September 27th, 2017 – API version 1.1
+
+PUT method for update an image is no longer available.
+
 ##June 2nd, 2017 – API version 1.1
 
-<font color="red">
-PUT method for [update an image](#update-an-image) will be deprecated and no longer be available after 31st July 2017.
+PUT method for update an image will be deprecated and no longer be available after 31st July 2017.
 
 Please make sure that your application is no longer using this functionality until the end of July 2017!
-</font>
 
 ##April 18th, 2017 - API version 1.1
 
