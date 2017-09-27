@@ -3162,146 +3162,6 @@ curl https://api.autoscout24.com/vehicles/7e59591f-c5a3-974e-e452-2951040ae4ee/i
 
 <p>For the list of possible <strong>error codes</strong> in the <code class="prettyprint">_response</code> object of the Response payload, please click <a href="#errors">here</a>.</p>
 
-<h2 id="update-an-image">Update an Image</h2>
-
-<blockquote>
-<h3 id="endpoint">Endpoint</h3>
-
-<p><code class="prettyprint">PUT</code> /vehicles/{vehicleId}/images/{imageId}</p>
-
-<h3 id="request-example">Request Example</h3>
-
-<p>Update the image with id = 1321961722 of the vehicle with id = b78d27e2-671a-47w6-80ab-d3726d7782c7:</p>
-</blockquote>
-<pre class="highlight shell"><code>
-curl https://api.autoscout24.com/vehicles/b78d27e2-671a-47w6-80ab-d3726d7782c7/images/1321961722 <span class="se">\</span>
-     -X PUT <span class="se">\</span>
-     -H <span class="s2">"X-AS24-Version: 1.1"</span> <span class="se">\</span>
-     -H <span class="s2">"Accept-Language: en-GB"</span> <span class="se">\</span>
-     -H <span class="s2">"Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW"</span> <span class="se">\</span>
-     -H <span class="s2">"Authorization: Bearer e7c00b24-9f5f-4909-88de-38f8d7ca08bf"</span> <span class="se">\</span>
-     -F <span class="s2">"file=@carFoto.jpg"</span>
-</code></pre>
-
-<p><font color="red">
-!!! ATTENTION !!!
-This method is only available until 31st July 2017 and will no longer be available afterwards.
-Please make sure that your application is no longer using this functionality until the end of July 2017!
-</font></p>
-
-<h3 id="parameters">Parameters</h3>
-
-<table><thead>
-<tr>
-<th>Parameter Name</th>
-<th>Type</th>
-<th>Mandatory</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>vehicleId</td>
-<td>URI Parameter</td>
-<td>Yes</td>
-<td>Unique identifier for a given vehicle.</td>
-</tr>
-<tr>
-<td>imageId</td>
-<td>URI Parameter</td>
-<td>Yes</td>
-<td>Unique identifier for a given image.</td>
-</tr>
-</tbody></table>
-
-<h3 id="headers">Headers</h3>
-
-<table><thead>
-<tr>
-<th>Header Name</th>
-<th>Data Type</th>
-<th>Mandatory</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>X-AS24-Version</td>
-<td>String</td>
-<td>Yes</td>
-<td>Defines the API version used to serve the request. Current version number is 1.1</td>
-</tr>
-<tr>
-<td>Accept-Language</td>
-<td>String</td>
-<td>No</td>
-<td>Language used for returning results, e.g. en-GB.</td>
-</tr>
-<tr>
-<td>Content-Type</td>
-<td>String</td>
-<td>Yes</td>
-<td>The mediatype used for the body of the request. <em>It should be: multipart/form-data</em></td>
-</tr>
-<tr>
-<td>Authorization</td>
-<td>String</td>
-<td>Yes</td>
-<td>The Bearer authentication token that was received via the OAuth authentication process.</td>
-</tr>
-</tbody></table>
-
-<blockquote>
-<h3 id="response-example">Response Example</h3>
-</blockquote>
-<pre class="highlight json"><code><span class="p">{</span><span class="w">
-  </span><span class="nt">"_links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"self"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nt">"href"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/vehicles/b78d27e2-671a-47w6-80ab-d3726d7782c7/images/1321961722"</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="nt">"_request"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/vehicles/b78d27e2-671a-47w6-80ab-d3726d7782c7/images/1321961722"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"body"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PUT"</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="nt">"_response"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Success"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"objectId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1321961722"</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-
-<h3 id="response-payload-parameters">Response Payload Parameters</h3>
-
-<p>The HTTP response message that&rsquo;s received has the following body attributes:</p>
-
-<table><thead>
-<tr>
-<th>Field Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>_links</td>
-<td>Object</td>
-<td>The links object that has all the hypermedia links of the requested resource.</td>
-</tr>
-<tr>
-<td>_request</td>
-<td><a href="#request-object">Request</a></td>
-<td>An object that contains information about the sent HTTP request message. This object is mostly needed for debugging, logging, and monitoring purposes.</td>
-</tr>
-<tr>
-<td>_response</td>
-<td><a href="#response-object">Response</a></td>
-<td>An object that contains information about what happened on the server e.g. it gives information if the request was processed successfully.</td>
-</tr>
-</tbody></table>
-
-<h3 id="error-codes">Error Codes</h3>
-
-<p>For the list of possible <strong>error codes</strong> in the <code class="prettyprint">_response</code> object of the Response payload, please click <a href="#errors">here</a>.</p>
-
 <h2 id="delete-an-image">Delete an Image</h2>
 
 <blockquote>
@@ -9679,13 +9539,15 @@ curl https://api.autoscout24.com/references <span class="se">\</span>
 </tr>
 </tbody></table>
 
+<h2 id="september-27th-2017-api-version-1-1">September 27th, 2017 – API version 1.1</h2>
+
+<p>PUT method for update an image is no longer available.</p>
+
 <h2 id="june-2nd-2017-api-version-1-1">June 2nd, 2017 – API version 1.1</h2>
 
-<p><font color="red">
-PUT method for <a href="#update-an-image">update an image</a> will be deprecated and no longer be available after 31st July 2017.</p>
+<p>PUT method for update an image will be deprecated and no longer be available after 31st July 2017.</p>
 
-<p>Please make sure that your application is no longer using this functionality until the end of July 2017!
-</font></p>
+<p>Please make sure that your application is no longer using this functionality until the end of July 2017!</p>
 
 <h2 id="april-18th-2017-api-version-1-1">April 18th, 2017 - API version 1.1</h2>
 
