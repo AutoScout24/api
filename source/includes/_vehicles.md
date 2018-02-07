@@ -180,7 +180,7 @@ Here you can find syntax requirements for all attributes used for the vehicle ob
 |model|C/B|integer|Yes|enumerated, greater 0|Model of the vehicle.|
 |modelVersion|C/B|string||maxLength=50|Additional non-generic vehicle model description (e.g. Cross, Ambition, Elegance, 2.0).|
 |nonSmoking|C|boolean|Yes||Needs to set to TRUE if the vehicle has been used by non-smokers only.|
-|powerKw|C/B|integer|Yes (non-caravan vehicles)|between 1 and 9999|Engine power in `kW`. Power in (German) `PS` does not need to be specified. It will automatically be derived from this value.|
+|powerKw|C/B|integer|Yes (non-caravan vehicles)|between 0 and 9999|Engine power in `kW`. Power in (German) `PS` does not need to be specified. It will automatically be derived from this value.|
 |previousOwners|C/B|integer||between 0 and 99|number of previous vehicle owners.|
 |prices|C/B|array, <a href="#price-object">Price</a>|Yes||Provides price information for the vehicle. Consists of currency, negotiable, price, priceType, taxDeductible.|
 |seals|C/B|array, integer||enumerated|List of used car seals granted for the vehicle. Allowed values can be retrieved via resource /seals.|
