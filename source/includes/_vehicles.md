@@ -123,7 +123,7 @@ Please note that after successful creation of a new vehicle this must still be p
 - Vehicles that are not available immediately must either carry a *deliveryDate* or delivery period in days (*deliveryDays*).
 - Indicating a *firstRegistration* date is mandatory except for new and demonstration vehicles (*vehicleOfferType* = N or D).
 - The *firstRegistration* date must not be more than 24 months in the past for employee’s vehicles (*vehicleOfferType* = J).
-- The *firstRegistration* date must not be more than 12 months in the past for pre-registered vehicles (*vehicleOfferType* = S).
+- The *firstRegistration* date for vehicles whose origin is not Italy, must not be more than 12 months in the past for pre-registered vehicles (*vehicleOfferType* = S).
 - The *firstRegistration* date must be more than 360 months (30 years) in the past for classic vehicles/oldtimers (*vehicleOfferType* = O).
 - The *mileage* must be set and greater than 0 for employee’s vehicles, pre-registered vehicles, classic vehicles/oldtimers and used vehicles (*vehicleOfferType* = J, S, O or U).
 - The *mileage* must be smaller than 1000 for new vehicles (*vehicleOfferType* = N).
