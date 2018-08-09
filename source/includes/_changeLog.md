@@ -11,6 +11,28 @@ This section documents all the changes on the AutoScout24 RESTful API. This incl
 |1.1|22.02.2016| - |
 |1.0|01.04.2015|22.08.2016 |
 
+##August 9th, 2018 – API version 1.1
+
+The next changes will be effective 10th of september 2018.
+
+### Format changes for ImageID
+
+The current ImageID even if is not explicitly documented as an unsigned integer value match directly to the definition of it. Current modifications will change the value to comply being a string represented of a uuid.
+
+| Current Type | Future Type |
+| :--- | :--- |
+| ImageID:UInt\(ex:1321961722\) | ImageID: String \(ex: 6fb6d93c-7189-471a-a0a2-169597a01cab\) |
+
+### Image Deduplication
+
+After the change it will be not possible to upload multiple times the same image \(same md5 checksum\).
+
+| Action | Current Response | Future Behaviour |
+| :--- | :--- | :--- |
+| Upload image 1 (md5: 74b87337454200d4d33f80c4663dc5e5) | Success Response, ImageID: 12345, N images: 1 | Success Response, ImageID: 704fa1b9-631d-460f-938f-6cf13d6b790f, N images: 1 |
+| Upload image 2 (md5: 74b87337454200d4d33f80c4663dc5e5) | Success Response, ImageID: 67890, N images: 2 | Success Response, ImageID: 704fa1b9-631d-460f-938f-6cf13d6b790f, N images: 1 |
+| Upload image 3 (md5: 9448a1bf333fadd2a57965ec38487b89) | Success Response, ImageID: 65437, N images: 3 | Success Response, ImageID: 6fb6d93c-7189-471a-a0a2-169597a01cab, N images: 2 |
+
 ##September 27th, 2017 – API version 1.1
 
 PUT method for update an image is no longer available.
