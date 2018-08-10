@@ -13,11 +13,12 @@ This section documents all the changes on the AutoScout24 RESTful API. This incl
 
 ##August 9th, 2018 – API version 1.1
 
-The following changes will be effective from the <span style="color:red"> **10th of september, 2018**</span>.
+
+The following changes will be effective from the <span style="color:red"> **10th of September, 2018**</span>.
 
 ### Format changes for ImageID
 
-The current ImageID, even if is not explicitly documented, is an unsigned integer. Current modifications will change the value to comply being a string (UUID).
+The current ImageID, even if is not explicitly documented, is an unsigned integer. Current modifications will change the value to be be a string (UUID).
 
 | Current Type | Future Type |
 | :--- | :--- |
@@ -25,7 +26,7 @@ The current ImageID, even if is not explicitly documented, is an unsigned intege
 
 ### Image Deduplication
 
-After the change it will be not possible to upload multiple times the same image \(same md5 checksum\).
+After the change it will not be possible to upload multiple times the same image \(same md5 checksum\).
 
 | Action | Current Response | Future Behavior |
 | :--- | :--- | :--- |
