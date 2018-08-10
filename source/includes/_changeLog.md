@@ -29,9 +29,9 @@ After the change it will be not possible to upload multiple times the same image
 
 | Action | Current Response | Future Behavior |
 | :--- | :--- | :--- |
-| Upload image 1 (md5: 74b87337454200d4d33f80c4663dc5e5) | Success Response, ImageID: 12345, number of images:: 1 | Success Response, ImageID: 704fa1b9-631d-460f-938f-6cf13d6b790f, number of images: 1 |
-| Upload image 2 (md5: 74b87337454200d4d33f80c4663dc5e5) | Success Response, ImageID: 67890, number of images:: 2 | Success Response, ImageID: 704fa1b9-631d-460f-938f-6cf13d6b790f, number of images: 1 |
-| Upload image 3 (md5: 9448a1bf333fadd2a57965ec38487b89) | Success Response, ImageID: 65437, number of images:: 3 | Success Response, ImageID: 6fb6d93c-7189-471a-a0a2-169597a01cab, number of images: 2 |
+| Upload image 1 (md5: 74b87337454200d4d33f80c4663dc5e5) | Success Response, ImageID: 12345, number of images: 1 | Success Response, ImageID: 704fa1b9-631d-460f-938f-6cf13d6b790f, number of images: 1 |
+| Upload image 2 (md5: 74b87337454200d4d33f80c4663dc5e5) | Success Response, ImageID: 67890, number of images: 2 | Success Response, ImageID: 704fa1b9-631d-460f-938f-6cf13d6b790f, number of images: 1 |
+| Upload image 3 (md5: 9448a1bf333fadd2a57965ec38487b89) | Success Response, ImageID: 65437, number of images: 3 | Success Response, ImageID: 6fb6d93c-7189-471a-a0a2-169597a01cab, number of images: 2 |
 
 ##September 27th, 2017 – API version 1.1
 
