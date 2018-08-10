@@ -27,7 +27,7 @@ The current ImageID even if it is not explicitly documented as an unsigned integ
 
 After the change it will be not possible to upload multiple times the same image \(same md5 checksum\).
 
-| Action | Current Response | Future Behaviour |
+| Action | Current Response | Future Behavior |
 | :--- | :--- | :--- |
 | Upload image 1 (md5: 74b87337454200d4d33f80c4663dc5e5) | Success Response, ImageID: 12345, number of images:: 1 | Success Response, ImageID: 704fa1b9-631d-460f-938f-6cf13d6b790f, number of images: 1 |
 | Upload image 2 (md5: 74b87337454200d4d33f80c4663dc5e5) | Success Response, ImageID: 67890, number of images:: 2 | Success Response, ImageID: 704fa1b9-631d-460f-938f-6cf13d6b790f, number of images: 1 |
