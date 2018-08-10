@@ -13,11 +13,11 @@ This section documents all the changes on the AutoScout24 RESTful API. This incl
 
 ##August 9th, 2018 – API version 1.1
 
-The next changes will be effective <span style="color:red"> **10th of september 2018**</span>.
+The following changes will be effective from the <span style="color:red"> **10th of september, 2018**</span>.
 
 ### Format changes for ImageID
 
-The current ImageID even if it is not explicitly documented as an unsigned integer it match's directly to the definition of it. Current modifications will change the value to comply being a string represented as a uuid.
+The current ImageID, even if is not explicitly documented, is an unsigned integer. Current modifications will change the value to comply being a string (UUID).
 
 | Current Type | Future Type |
 | :--- | :--- |
