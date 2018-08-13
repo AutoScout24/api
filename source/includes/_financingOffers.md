@@ -35,14 +35,14 @@ curl https://api.autoscout24.com/vehicles/7e59591f-c5a3-974e-e452-2951040ae4ee/f
 	}'
 ```
 
-Add a new financing offer to the vehicle. *(This is only available to the dealers in Germany.)*
+Add a new financing offer to the vehicle. *(This is only available to dealers in Germany and Italy.)*
 
 Please note that AutoScout24 can only add one financing offer per vehicle at the moment.
 
 
 **Semantic Rules**
 
-- Financing offers are only accepted for vehicles inserted by German dealers. Financing offers added by non-German dealers are rejected.
+- Financing offers are only accepted for vehicles inserted by German or Italian dealers. Financing offers added by dealers in another country are rejected.
 
 - Only one financing offer can be added for each vehicle.
 
