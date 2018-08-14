@@ -26,9 +26,9 @@ The current ImageID, even if is not explicitly documented, is an unsigned intege
 
 ### Image Deduplication
 
-After the change it will not be possible to upload multiple times the same image \(same md5 checksum\).
+After the change it will not be possible to upload multiple times the same image \(same md5 checksum\) for the same vehicle.
 
-| Action | Current Response | Future Behavior |
+| Action on Single Vehicle | Current Response | Future Behavior |
 | :--- | :--- | :--- |
 | Upload image 1 (md5: 74b87337454200d4d33f80c4663dc5e5) | Success Response, ImageID: 12345, number of images: 1 | Success Response, ImageID: 704fa1b9-631d-460f-938f-6cf13d6b790f, number of images: 1 |
 | Upload image 2 (md5: 74b87337454200d4d33f80c4663dc5e5) | Success Response, ImageID: 67890, number of images: 2 | Success Response, ImageID: 704fa1b9-631d-460f-938f-6cf13d6b790f, number of images: 1 |
