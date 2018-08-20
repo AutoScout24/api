@@ -24,6 +24,14 @@ The current ImageID, even if is not explicitly documented, is an unsigned intege
 | :--- | :--- |
 | ImageID: Unsigned Integer (ex: 1321961722) | ImageID: String (ex: 6fb6d93c-7189-471a-a0a2-169597a01cab) |
 
+After the activation date any request to the API should be done using the UUID, and not the Integer, for the existing image. 
+
+If ImageIds are saved locally in your system you will need to update them to the new format before doing any request on images. The following possibilities are available:
+- Retrieve entire list of images for a vehicle.
+- Retrieve entire list of images for a vehicle from image order.
+- Delete all images for a vehicle and upload them again.
+
+
 ### Image Deduplication
 
 After the change it will not be possible to upload multiple times the same image \(same md5 checksum\) for the same vehicle.
@@ -33,6 +41,7 @@ After the change it will not be possible to upload multiple times the same image
 | Upload image 1 (md5: 74b87337454200d4d33f80c4663dc5e5) | Success Response, ImageID: 12345, number of images: 1 | Success Response, ImageID: 704fa1b9-631d-460f-938f-6cf13d6b790f, number of images: 1 |
 | Upload image 2 (md5: 74b87337454200d4d33f80c4663dc5e5) | Success Response, ImageID: 67890, number of images: 2 | Success Response, ImageID: 704fa1b9-631d-460f-938f-6cf13d6b790f, number of images: 1 |
 | Upload image 3 (md5: 9448a1bf333fadd2a57965ec38487b89) | Success Response, ImageID: 65437, number of images: 3 | Success Response, ImageID: 6fb6d93c-7189-471a-a0a2-169597a01cab, number of images: 2 |
+
 
 ##September 27th, 2017 – API version 1.1
 
