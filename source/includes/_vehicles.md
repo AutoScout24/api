@@ -172,7 +172,7 @@ Here you can find syntax requirements for all attributes used for the vehicle ob
 |identifier|C/B|<a href="#identifier-object">Identifier</a>|||Provides identification information for the vehicle. Consists of crossReference, offerReference, vehicleId.|
 |includedService|C/B|array, integer||enumerated|Included services as part of the vehicle offer. Allowed values can be retrieved via resource /references. Example: Id 1 (= HU/AU neu) indicates that a vehicle's last technical inspection as required by German regulations has been done recently. Should only be set if last technical inspection was done not more than 3 months ago.|
 |interiorColor|C|integer||enumerated, greater 0|Basic color of vehicle's interior. Used to enable search by basic interior color. Allowed values can be retrieved via resource /references.|
-|licencePlateNumber|C/B|string||maxLength=20|Licence plate number of the vehicle.|
+|licencePlateNumber|C/B|string||maxLength=10|Licence plate number of the vehicle.|
 |maintenance|C/B|<a href="#maintenance-object">Maintenance</a>|Yes||Provides maintenance information for the vehicle. Consists of fullServiceHistory, lastCamBeltService, lastTechnicalService, nextInspection.|
 |make|C/B|integer|Yes|enumerated, greater 0|Make of the vehicle.|
 |metallic|C/B|boolean|Yes||Needs to be set to TRUE if vehicle's body color has a metallic effect.|
