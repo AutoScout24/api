@@ -792,6 +792,7 @@ following information:</p>
             "make": 13, \
             "metallic": true, \
             "mileage": 20000, \
+            "carpassMileageUrl": "https://example.url", \
             "model": 20223, \
             "modelVersion": "Avant", \
             "nonSmoking": true, \
@@ -1115,6 +1116,14 @@ following information:</p>
 <td></td>
 <td>between 0 and 9999999</td>
 <td>number of kilometers <code class="prettyprint">km</code> the vehicle has run.</td>
+</tr>
+<tr>
+<td>carpassMileageUrl</td>
+<td>C/B</td>
+<td>string</td>
+<td></td>
+<td>maxLength=1000</td>
+<td>URL of mileage at CarPass.</td>
 </tr>
 <tr>
 <td>model</td>
@@ -1631,7 +1640,7 @@ iVBORw0KGgoAAAANSUhEUgAAA5IAAAF/CAYAAAA7NPZnAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
   </span><span class="p">},</span><span class="w">
   </span><span class="nt">"_request"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/vehicles"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"body"</span><span class="p">:</span><span class="w"> </span><span class="s2">"{\"accident\":false,\"availability\":{\"availabilityType\":3,\"deliveryDate\":null,\"deliveryDays\":7},\"bodyColor\":2,\"bodyColorName\":\"metallic blue\",\"cabOrRental\":false,\"countryVersion\":\"AT\",\"cylinderCapacity\":1400,\"cylinders\":4,\"description\":\"This is the description field for 4000 characters!\",\"doors\":5,\"driveType\":\"R\",\"emission\":{\"co2\":23,\"efficiencyClass\":2,\"emissionsSticker\":1,\"fuel\":{\"additionalSupportedFuelTypes\":[2,3],\"consumption\":{\"electricConsumptionCombined\":6.6,\"fuelConsumptionCombined\":6.1,\"fuelConsumptionHighway\":5.2,\"fuelConsumptionUrban\":4.7},\"primaryFuelType\":1},\"particleFilter\":true,\"pollutionClass\":1},\"emptyWeight\":1200,\"equipment\":[1,2,4],\"firstRegistration\":\"2011-11\",\"fuelCategory\":\"B\",\"gears\":6,\"hsn\":\"1240\",\"identifier\":{\"crossReference\":\"DATX_002\",\"offerReference\":\"A12453\",\"vehicleId\":\"6c48bb1f-d14b-4ed3-ae1d-508cb71e19ba\"},\"includedServices\":[1,2],\"interiorColor\":1,\"maintenance\":{\"fullServiceHistory\":true,\"lastCamBeltService\":\"2013-12\",\"lastTechnicalService\":\"2013-02\",\"nextInspection\":\"2020-11\"},\"make\":13,\"metallic\":true,\"mileage\":20000,\"model\":20223,\"modelVersion\":\"Avant\",\"nonSmoking\":true,\"licencePlateNumber\":\"D13-MM45\",\"powerKw\":65,\"previousOwners\":1,\"prices\":[{\"currency\":\"EUR\",\"negotiable\":true,\"price\":9000,\"priceType\":\"Public\",\"taxDeductible\":true},{\"currency\":\"EUR\",\"negotiable\":null,\"price\":8500,\"priceType\":\"Dealer\",\"taxDeductible\":null}],\"seals\":[102],\"seats\":5,\"transmission\":\"M\",\"tsn\":\"936\",\"upholstery\":\"AL\",\"vehicleBody\":1,\"vehicleOfferType\":\"U\",\"vehicleType\":\"C\",\"vin\":\"AB023475861123745\",\"warrantyMonths\":30}"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"body"</span><span class="p">:</span><span class="w"> </span><span class="s2">"{\"accident\":false,\"availability\":{\"availabilityType\":3,\"deliveryDate\":null,\"deliveryDays\":7},\"bodyColor\":2,\"bodyColorName\":\"metallic blue\",\"cabOrRental\":false,\"countryVersion\":\"AT\",\"cylinderCapacity\":1400,\"cylinders\":4,\"description\":\"This is the description field for 4000 characters!\",\"doors\":5,\"driveType\":\"R\",\"emission\":{\"co2\":23,\"efficiencyClass\":2,\"emissionsSticker\":1,\"fuel\":{\"additionalSupportedFuelTypes\":[2,3],\"consumption\":{\"electricConsumptionCombined\":6.6,\"fuelConsumptionCombined\":6.1,\"fuelConsumptionHighway\":5.2,\"fuelConsumptionUrban\":4.7},\"primaryFuelType\":1},\"particleFilter\":true,\"pollutionClass\":1},\"emptyWeight\":1200,\"equipment\":[1,2,4],\"firstRegistration\":\"2011-11\",\"fuelCategory\":\"B\",\"gears\":6,\"hsn\":\"1240\",\"identifier\":{\"crossReference\":\"DATX_002\",\"offerReference\":\"A12453\",\"vehicleId\":\"6c48bb1f-d14b-4ed3-ae1d-508cb71e19ba\"},\"includedServices\":[1,2],\"interiorColor\":1,\"maintenance\":{\"fullServiceHistory\":true,\"lastCamBeltService\":\"2013-12\",\"lastTechnicalService\":\"2013-02\",\"nextInspection\":\"2020-11\"},\"make\":13,\"metallic\":true,\"mileage\":20000,\"carpassMileageUrl\":"</span><span class="err">https://example.com</span><span class="s2">",\"model\":20223,\"modelVersion\":\"Avant\",\"nonSmoking\":true,\"licencePlateNumber\":\"D13-MM45\",\"powerKw\":65,\"previousOwners\":1,\"prices\":[{\"currency\":\"EUR\",\"negotiable\":true,\"price\":9000,\"priceType\":\"Public\",\"taxDeductible\":true},{\"currency\":\"EUR\",\"negotiable\":null,\"price\":8500,\"priceType\":\"Dealer\",\"taxDeductible\":null}],\"seals\":[102],\"seats\":5,\"transmission\":\"M\",\"tsn\":\"936\",\"upholstery\":\"AL\",\"vehicleBody\":1,\"vehicleOfferType\":\"U\",\"vehicleType\":\"C\",\"vin\":\"AB023475861123745\",\"warrantyMonths\":30}"</span><span class="p">,</span><span class="w">
     </span><span class="nt">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"POST"</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="nt">"_response"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -1831,6 +1840,7 @@ iVBORw0KGgoAAAANSUhEUgAAA5IAAAF/CAYAAAA7NPZnAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         </span><span class="nt">"make"</span><span class="p">:</span><span class="w"> </span><span class="mi">57</span><span class="p">,</span><span class="w">
         </span><span class="nt">"metallic"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
         </span><span class="nt">"mileage"</span><span class="p">:</span><span class="w"> </span><span class="mi">999999</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"carpassMileageUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://example.url"</span><span class="p">,</span><span class="w">
         </span><span class="nt">"model"</span><span class="p">:</span><span class="w"> </span><span class="mi">1955</span><span class="p">,</span><span class="w">
         </span><span class="nt">"modelVersion"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
         </span><span class="nt">"nonSmoking"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
@@ -1928,6 +1938,7 @@ iVBORw0KGgoAAAANSUhEUgAAA5IAAAF/CAYAAAA7NPZnAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         </span><span class="nt">"make"</span><span class="p">:</span><span class="w"> </span><span class="mi">29</span><span class="p">,</span><span class="w">
         </span><span class="nt">"metallic"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
         </span><span class="nt">"mileage"</span><span class="p">:</span><span class="w"> </span><span class="mi">58823</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"carpassMileageUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://example.url"</span><span class="p">,</span><span class="w">
         </span><span class="nt">"model"</span><span class="p">:</span><span class="w"> </span><span class="mi">19089</span><span class="p">,</span><span class="w">
         </span><span class="nt">"modelVersion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"C-MAX 1.6 TDCi DPF Style "</span><span class="p">,</span><span class="w">
         </span><span class="nt">"nonSmoking"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
@@ -2180,6 +2191,7 @@ iVBORw0KGgoAAAANSUhEUgAAA5IAAAF/CAYAAAA7NPZnAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
       </span><span class="nt">"make"</span><span class="p">:</span><span class="w"> </span><span class="mi">57</span><span class="p">,</span><span class="w">
       </span><span class="nt">"metallic"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
       </span><span class="nt">"mileage"</span><span class="p">:</span><span class="w"> </span><span class="mi">999999</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"carpassMileageUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://example.com"</span><span class="p">,</span><span class="w">
       </span><span class="nt">"model"</span><span class="p">:</span><span class="w"> </span><span class="mi">1955</span><span class="p">,</span><span class="w">
       </span><span class="nt">"modelVersion"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
       </span><span class="nt">"nonSmoking"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
@@ -2346,6 +2358,7 @@ iVBORw0KGgoAAAANSUhEUgAAA5IAAAF/CAYAAAA7NPZnAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
             "make": 13, \
             "metallic": true, \
             "mileage": 20000, \
+            "carpassMileageUrl": "https://example.url", \
             "model": 20223, \
             "modelVersion": "Avant", \
             "nonSmoking": true, \
@@ -2452,7 +2465,7 @@ iVBORw0KGgoAAAANSUhEUgAAA5IAAAF/CAYAAAA7NPZnAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
   </span><span class="p">},</span><span class="w">
   </span><span class="nt">"_request"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/vehicles/b78d27e2-671a-47q6-80ac-d3726d7774c7"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"body"</span><span class="p">:</span><span class="w"> </span><span class="s2">"{\"accident\":false,\"availability\":{\"availabilityType\":3,\"deliveryDate\":null,\"deliveryDays\":7},\"bodyColor\":2,\"bodyColorName\":\"metallic blue\",\"cabOrRental\":false,\"countryVersion\":\"AT\",\"cylinderCapacity\":1400,\"cylinders\":4,\"description\":\"This is the description field for 4000 characters!\",\"doors\":5,\"driveType\":\"R\",\"emission\":{\"co2\":23,\"efficiencyClass\":2,\"emissionsSticker\":1,\"fuel\":{\"additionalSupportedFuelTypes\":[2,3],\"consumption\":{\"electricConsumptionCombined\":6.6,\"fuelConsumptionCombined\":6.1,\"fuelConsumptionHighway\":5.2,\"fuelConsumptionUrban\":4.7},\"primaryFuelType\":1},\"particleFilter\":true,\"pollutionClass\":1},\"emptyWeight\":1200,\"equipment\":[1,2,4],\"firstRegistration\":\"2011-11\",\"fuelCategory\":\"B\",\"gears\":6,\"hsn\":\"1240\",\"identifier\":{\"crossReference\":\"DATX_002\",\"offerReference\":\"A12453\",\"vehicleId\":null},\"includedServices\":[1,2],\"interiorColor\":1,\"maintenance\":{\"fullServiceHistory\":true,\"lastCamBeltService\":\"2013-12\",\"lastTechnicalService\":\"2013-02\",\"nextInspection\":\"2020-11\"},\"make\":13,\"metallic\":true,\"mileage\":20000,\"model\":20223,\"modelVersion\":\"Avant\",\"nonSmoking\":true,\"licencePlateNumber\":\"D13-MM45\",\"powerKw\":65,\"previousOwners\":1,\"prices\":[{\"currency\":\"EUR\",\"negotiable\":true,\"price\":9000,\"priceType\":\"Public\",\"taxDeductible\":true},{\"currency\":\"EUR\",\"negotiable\":null,\"price\":8500,\"priceType\":\"Dealer\",\"taxDeductible\":null}],\"seals\":[102],\"seats\":5,\"transmission\":\"M\",\"tsn\":\"936\",\"upholstery\":\"AL\",\"vehicleBody\":1,\"vehicleOfferType\":\"U\",\"vehicleType\":\"C\",\"vin\":\"AB023475861123745\",\"warrantyMonths\":30}"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"body"</span><span class="p">:</span><span class="w"> </span><span class="s2">"{\"accident\":false,\"availability\":{\"availabilityType\":3,\"deliveryDate\":null,\"deliveryDays\":7},\"bodyColor\":2,\"bodyColorName\":\"metallic blue\",\"cabOrRental\":false,\"countryVersion\":\"AT\",\"cylinderCapacity\":1400,\"cylinders\":4,\"description\":\"This is the description field for 4000 characters!\",\"doors\":5,\"driveType\":\"R\",\"emission\":{\"co2\":23,\"efficiencyClass\":2,\"emissionsSticker\":1,\"fuel\":{\"additionalSupportedFuelTypes\":[2,3],\"consumption\":{\"electricConsumptionCombined\":6.6,\"fuelConsumptionCombined\":6.1,\"fuelConsumptionHighway\":5.2,\"fuelConsumptionUrban\":4.7},\"primaryFuelType\":1},\"particleFilter\":true,\"pollutionClass\":1},\"emptyWeight\":1200,\"equipment\":[1,2,4],\"firstRegistration\":\"2011-11\",\"fuelCategory\":\"B\",\"gears\":6,\"hsn\":\"1240\",\"identifier\":{\"crossReference\":\"DATX_002\",\"offerReference\":\"A12453\",\"vehicleId\":null},\"includedServices\":[1,2],\"interiorColor\":1,\"maintenance\":{\"fullServiceHistory\":true,\"lastCamBeltService\":\"2013-12\",\"lastTechnicalService\":\"2013-02\",\"nextInspection\":\"2020-11\"},\"make\":13,\"metallic\":true,\"mileage\":20000,\"carpassMileageUrl\":"</span><span class="err">https://example.url</span><span class="s2">",\"model\":20223,\"modelVersion\":\"Avant\",\"nonSmoking\":true,\"licencePlateNumber\":\"D13-MM45\",\"powerKw\":65,\"previousOwners\":1,\"prices\":[{\"currency\":\"EUR\",\"negotiable\":true,\"price\":9000,\"priceType\":\"Public\",\"taxDeductible\":true},{\"currency\":\"EUR\",\"negotiable\":null,\"price\":8500,\"priceType\":\"Dealer\",\"taxDeductible\":null}],\"seals\":[102],\"seats\":5,\"transmission\":\"M\",\"tsn\":\"936\",\"upholstery\":\"AL\",\"vehicleBody\":1,\"vehicleOfferType\":\"U\",\"vehicleType\":\"C\",\"vin\":\"AB023475861123745\",\"warrantyMonths\":30}"</span><span class="p">,</span><span class="w">
     </span><span class="nt">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PUT"</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="nt">"_response"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
