@@ -35,14 +35,14 @@ curl https://api.autoscout24.com/vehicles/7e59591f-c5a3-974e-e452-2951040ae4ee/f
 	}'
 ```
 
-Add a new financing offer to the vehicle. *(This is only available to dealers in Germany and Italy.)*
+Add a new financing offer to the vehicle. *(This is only available to dealers in Germany, Italy, Netherlands and Belgium.)*
 
 Please note that AutoScout24 can only add one financing offer per vehicle at the moment.
 
 
 **Semantic Rules**
 
-- Financing offers are only accepted for vehicles inserted by German, Italian, Dutch or Belgian dealers. Financing offers added by dealers in another country are rejected.
+- Financing offers are only accepted for vehicles inserted by German, Italian, Dutch and Belgian dealers. Financing offers added by dealers from any other country are rejected.
 
 - Only one financing offer can be added for each vehicle.
 
@@ -138,7 +138,7 @@ curl https://api.autoscout24.com/vehicles/7e59591f-c5a3-974e-e452-2951040ae4ee/f
      -H "Authorization: Bearer e7c00b24-9f5f-4909-88de-38f8d7ca08bf"
 ```
 
-Retrieve a collection of all available financing offers for a specific vehicle. *(This is only avaialble to the dealers in Germany.)*
+Retrieve a collection of all available financing offers for a specific vehicle. *(This is only available to the dealers in Germany, Italy, Netherland and Belgium.)*
 
 At the moment, only one offer can be added and retrieved for a specific vehicle.
 
@@ -266,7 +266,7 @@ curl https://api.autoscout24.com/vehicles/7e59591f-c5a3-974e-e452-2951040ae4ee/f
      -H "Authorization: Bearer 73a06d83-6e13-4444-a288-6aa8c4098c2f"
 ```
 
-Retrieve the given financing offer information of a specific vehicle. (*This is only avaialble to the dealers in Germany. *).
+Retrieve the given financing offer information of a specific vehicle. (*This is only avaialble to the dealers in Germany, Italy, Netherland and Belgium. *).
 
 Currently, only one offer can be added and retrieved for a specific vehicle.
 
@@ -407,12 +407,12 @@ curl https://api.autoscout24.com/vehicles/7e59591f-c5a3-974e-e452-2951040ae4ee/f
 	}'
 ```
 
-Update the information of the given financing offer. (*This is only avaialble to the dealers in Germany. *).
+Update the information of the given financing offer. (*This is only available to the dealers in Germany, Italy, Netherlands and Belgium. *).
 
 
 **Semantic Rules**
 
-- Financing offers are only accepted for vehicles inserted by German dealers. Financing offers added by non-German dealers are rejected.
+- Financing offers are only accepted for vehicles inserted by German, Italian, Dutch and Belgian dealers. Financing offers added by dealers from any other country are rejected.
 
 - Only one financing offer can be added for each vehicle.
 
