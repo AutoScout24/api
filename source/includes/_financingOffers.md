@@ -266,7 +266,7 @@ curl https://api.autoscout24.com/vehicles/7e59591f-c5a3-974e-e452-2951040ae4ee/f
      -H "Authorization: Bearer 73a06d83-6e13-4444-a288-6aa8c4098c2f"
 ```
 
-Retrieve the given financing offer information of a specific vehicle. (*This is only avaialble to the dealers in Germany, Italy, Netherland and Belgium. *).
+Retrieve the given financing offer information of a specific vehicle. *(This is only avaialble to the dealers in Germany, Italy, Netherland and Belgium)*.
 
 Currently, only one offer can be added and retrieved for a specific vehicle.
 
@@ -407,7 +407,7 @@ curl https://api.autoscout24.com/vehicles/7e59591f-c5a3-974e-e452-2951040ae4ee/f
 	}'
 ```
 
-Update the information of the given financing offer. (*This is only available to the dealers in Germany, Italy, Netherlands and Belgium. *).
+Update the information of the given financing offer. *(This is only available to the dealers in Germany, Italy, Netherlands and Belgium.)*
 
 
 **Semantic Rules**
