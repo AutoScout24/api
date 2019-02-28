@@ -42,7 +42,7 @@ Please note that AutoScout24 can only add one financing offer per vehicle at the
 
 **Semantic Rules**
 
-- Financing offers are only accepted for vehicles inserted by German or Italian dealers. Financing offers added by dealers in another country are rejected.
+- Financing offers are only accepted for vehicles inserted by German, Italian, Dutch or Belgian dealers. Financing offers added by dealers in another country are rejected.
 
 - Only one financing offer can be added for each vehicle.
 
@@ -145,7 +145,7 @@ At the moment, only one offer can be added and retrieved for a specific vehicle.
 
 **Semantic Rules**
 
-- Financing offers can be added and retrieved by German dealers only.
+- Financing offers can be added and retrieved by German, Italian, Dutch and Belgian dealers only.
 
 - Currently, only one financing offer can be added and retrieved for each vehicle.
 
@@ -272,7 +272,7 @@ Currently, only one offer can be added and retrieved for a specific vehicle.
 
 **Semantic Rules**
 
-- Financing offers can be added and retrieved by German dealers only.
+- Financing offers can be added and retrieved by German, Italian, Dutch and Belgian dealers only.
 
 - Currently, only one financing offer can be added and retrieved for each vehicle.
 

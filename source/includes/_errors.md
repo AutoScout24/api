@@ -120,7 +120,7 @@ Responses as well as messages are classified by their type:
 |50104|A contact for this vehicle does not exist. This vehicle cannot be published without contact.|
 |50105|You are not allowed to publish/unpublish this vehicle on this channel.|
 |50106|Field seals have an invalid value. Please provide supported seals.|
-|50107|Only german dealers are allowed to add financing offers.|
+|50107|Only dealers from Germany, Netherlands and Belgium are allowed to add financing offers.|
 |50108|A financing offer for this vehicle already exists. Only one financing offer per vehicle is allowed.|
 |50109|Provided decimal has an invalid number of decimal places. Please specify at most {precision} digits after decimal point.|
 |50110|Field {field} is not available for vehicle type {vehicleType}.|
