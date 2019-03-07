@@ -78,7 +78,7 @@ Please note that AutoScout24 can only add one financing offer per vehicle at the
 |endingRate|Number|no|Only between 0.00 and 999999999.99|Ending Rate in `EUR`.|
 |financingType|Enum|yes|Values: C=Credit|Financing type needs to be specified. Currently only Credit type can be selected.|
 |grossCreditAmount|Number|yes|Only between 0.01 and 999999999.99|Gross credit amount in `EUR`.|
-|initialPayment|Number|no|Only between 0.00 and 999999999.99|Initial payment if applicable for the loan in `EUR`.|
+|initialPayment|Number|no|Only between 0.00 and 999999.99|Initial payment if applicable for the loan in `EUR`.|
 |monthlyRate|Number|yes|Only between 0.00 and 999999999.99|Monthly rate in `EUR`.|
 |netCreditAmount|Number|yes|Only between 0.00 and 999999999.99|Net credit amount in `EUR`.|
 |paymentProtectionInsurance|Number|no|Only between 0.00 and 999999999.99|Payment protection insurance in `EUR`.|
@@ -241,7 +241,7 @@ The following table shows the fields that are contained in the `_data` object of
 |endingRate|Number|no|Only between 0.00 and 999999999.99|Ending Rate in `EUR`.|
 |financingType|Enum|Values: C=Credit|Financing type needs to be specified. Currently only Credit type can be selected.|
 |grossCreditAmount|Number|Only between 0.01 and 999999999.99|Gross credit amount in `EUR`.|
-|initialPayment|Number|Only between 0.00 and 999999999.99|Initial payment if applicable for the loan in `EUR`.|
+|initialPayment|Number|Only between 0.00 and 999999.99|Initial payment if applicable for the loan in `EUR`.|
 |monthlyRate|Number|Only between 0.00 and 999999999.99|Monthly rate in `EUR`.|
 |netCreditAmount|Number|Only between 0.00 and 999999999.99|Net credit amount in `EUR`.|
 |paymentProtectionInsurance|Number|Only between 0.00 and 999999999.99|Payment protection insurance in `EUR`.|
@@ -364,7 +364,7 @@ The following table shows the fields that are contained in the `_data` object of
 |endingRate|Number|no|Only between 0.00 and 999999999.99|Ending Rate in `EUR`.|
 |financingType|Enum|Values: C=Credit|Financing type needs to be specified. Currently only Credit type can be selected.|
 |grossCreditAmount|Number|Only between 0.01 and 999999999.99|Gross credit amount in `EUR`.|
-|initialPayment|Number|Only between 0.00 and 999999999.99|Initial payment if applicable for the loan in `EUR`.|
+|initialPayment|Number|Only between 0.00 and 999999.99|Initial payment if applicable for the loan in `EUR`.|
 |monthlyRate|Number|Only between 0.00 and 999999999.99|Monthly rate in `EUR`.|
 |netCreditAmount|Number|Only between 0.00 and 999999999.99|Net credit amount in `EUR`.|
 |paymentProtectionInsurance|Number|Only between 0.00 and 999999999.99|Payment protection insurance in `EUR`.|
@@ -449,7 +449,7 @@ Update the information of the given financing offer. *(This is only available to
 |endingRate|Number|no|Only between 0.00 and 999999999.99|Ending Rate in `EUR`.|
 |financingType|Enum|yes|Values: C=Credit|Financing type needs to be specified. Currently only Credit type can be selected.|
 |grossCreditAmount|Number|yes|Only between 0.01 and 999999999.99|Gross credit amount in `EUR`.|
-|initialPayment|Number|no|Only between 0.00 and 999999999.99|Initial payment if applicable for the loan in `EUR`.|
+|initialPayment|Number|no|Only between 0.00 and 999999.99|Initial payment if applicable for the loan in `EUR`.|
 |monthlyRate|Number|yes|Only between 0.00 and 999999999.99|Monthly rate in `EUR`.|
 |netCreditAmount|Number|yes|Only between 0.00 and 999999999.99|Net credit amount in `EUR`.|
 |paymentProtectionInsurance|Number|no|Only between 0.00 and 999999999.99|Payment protection insurance in `EUR`.|
