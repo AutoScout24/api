@@ -22,3 +22,7 @@ This project uses `middleman` and `middleman-gh-pages` to create the API documen
 
 - Run `./deploy.sh`
 - Be happy
+
+### Additional information
+
+Documentation is "deployed" on `dappl7v001.unix.as24.local` machine
