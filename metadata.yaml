@@ -1,0 +1,21 @@
+id: as24-cashstack-delta-account-setup
+name: AutoScout24 Documentation pages for LCA
+description: |
+  AutoScout24 Documentation pages for LCA.
+type: configuration
+product: lca
+lifecycle: ga
+availability: false
+confidentiality: public
+exposure:
+  - consumer-facing-read
+integrity: false
+vertical: as24
+owners:
+  - as24-ues-creation-flow@autoscout24.com
+platform: aws
+tags:
+  - cashstack
+  - services
+  - lca
+  - documentation
