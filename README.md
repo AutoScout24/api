@@ -1,4 +1,10 @@
-## AutoScout24 API Documentation
+# This is DEPRECATED
+
+This documentation refers to LCA. For new development, please refer to LCA-NG
+https://listing-creation.api.autoscout24.com/docs#/
+
+
+## AutoScout24 API Documentation (LCA)
 
 This project uses `middleman` and `middleman-gh-pages` to create the API documentation.
 
